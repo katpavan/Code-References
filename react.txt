@@ -1,0 +1,10 @@
+INSTALLING REACT w/ VERSION
+
+sudo npm i -g create-react-app@<version number here>
+
+
+CREATING NEW APP
+sudo npx create-react-app <app name here>
+
+
+------------------------------------------------------

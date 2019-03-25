@@ -1,0 +1,353 @@
+1. put a piece of paper or calendar on one of these 
+
+	* entrance to your apt/house
+	* fridge
+	* bathroom
+
+	the reason for this is so you definitely see this piece of paper everyday, without having to do anything extra
+
+2. keep track of your habits on that piece of paper
+
+	write the date you read a coding book and how many pages
+
+	write the date you do a coding problem on leetcode
+
+	write the date you watch a conference talk
+
+	write the date you participate in a hackathon
+
+	write the date you redo a previous hw
+
+	keep track of your streak! So, if your habit is to read 1 page a day and you did it Nov 5th, Nov 6th, Nov 7th but skipped on Nov 8th, then your streak is 3x! Now your goal is to beat your streak of 3x - nothing more, nothing less. 
+
+		don't worry about getting a job, about mastering something, just focus on maintaining your habit - that's the key to success
+
+		Jerry Seinfeld used a technique like this. Read more here:
+
+			https://jamesclear.com/stop-procrastinating-seinfeld-strategy
+
+3. if you ever can't seem to get going on your habit, it's time for you to be surrounded by people who have that habit.
+
+	come back to class, contact Pavan to come back. You are welcome, encouraged to come. We'll be happy to see you come back.
+
+	If you want to come back and have an interview or you have questions come back, I'll certainly help.
+
+		732-236-8447
+		pavankat@gmail.com
+		linkedin.com/in/pavankat
+
+4. How many habits should I have
+	
+	Doing one habit or a combination of habits is solid
+
+5. How often should I do the habit?
+
+	any one of these intervals to do your habit(s) is fine: once a day, once every three days, Once a week, once a month	
+
+6. What habits should I have? 
+	
+	* redo your hws so you can do each one in 6 to 10 hours
+
+		once you can do that, you've mastered the material and you're too good for it, you should move on beyond it
+
+	* Read a coding book
+
+		if you want to learn to talk like a senior developer then you need to read a good coding book.
+
+		The best books you can read are these:
+
+		1. best web development, test driven development book out there
+			http://railstutorial.com/
+
+		2. best computer science book
+			Python Programming - an introduction to computer science 2nd edition - john zelle 2010
+
+				http://ce.sharif.edu/courses/96-97/2/ce153-4/resources/root/Text%20Books/An%20Introduction%20to%20Computer%20Science.pdf
+
+			that's the best book ^^^ but check out these resources after you're done to see if there are any gaps in your knowledge:
+
+				if you want some more insight into data structures, it's in that book but check out:
+
+					https://medium.freecodecamp.org/10-common-data-structures-explained-with-videos-exercises-aaff6c06fb2b
+
+				this is great too
+					https://www.interviewcake.com/data-structures-and-algorithms-guide
+
+				more 
+					https://teachyourselfcs.com/#algorithms
+
+					https://github.com/pavankat/big-o-in-plain-english
+		3. 
+			Writing Tests in JavaScript, great resource here: 
+				
+				https://github.com/npatro/javascript-unit-testing-with-mocha
+
+				https://codeburst.io/javascript-unit-testing-using-mocha-and-chai-1d97d9f18e71?gi=e64e6244a3f3
+
+		4. best JavaScript book
+
+			javascript.info
+
+			it's actually not a book but if it was a book - it would be the best JavaScript book
+
+			also free
+		
+		5. css
+
+			https://www.smashingmagazine.com/2007/07/css-specificity-things-you-should-know/
+
+			https://learn.shayhowe.com/html-css/
+
+			https://smacss.com/book/
+
+		6.
+			if you want to find any book for free, this is what you google:
+
+				file:pdf nameofbookgoeshere
+
+
+		7. learn python (ONLY IF YOU FINISHED THE ABOVE ^^^^)
+
+			http://greenteapress.com/wp/think-python-2e/
+				
+				free thanks to ashley
+
+		8. security engineering - great book (ONLY IF YOU FINISHED THE ABOVE ^^^^)
+
+			https://www.cl.cam.ac.uk/~rja14/book.html
+
+				if you’re even thinking of doing any security
+				engineering, you need to read this book. It’s the first, and only, end-to-end
+				modern security design and engineering book ever written.
+				
+			‘There is an extraordinary textbook written by Ross Anderson, professor of computer security at University of Cambridge. It’s called Security Engineering, and despite being more than 1,000 pages long, it’s one of the most readable pop-science slogs of the decade.’ 
+			Ben Goldacre
+
+			‘I'm incredibly impressed that one person could produce such a thorough coverage. Moreover, you make the stuff easy and enjoyable to read. I find it just as entertaining — and far more useful — than novels (and my normal science fiction). When I first got it in the mail, I said to myself "I'm never going to read all of that." But once I started reading I just kept going and going. Fantastic: well done. Now, let's hope that all those in charge of security for information technology will also read the book and heed the lessons.’ 
+			Don Norman
+
+
+
+	* Practice interview problems
+
+		BE SURE TO MAKE AN ACCOUNT ON quizlet and every problem you do, make a flash card of the problem and solution(s) + comments on each line + input,output,observations you've made for each problem
+
+		Practice previous questions you've done before on quizlet until you can do them super super super super quick. It'll take seeing something 50 times before you'll actually retain it.
+
+		make a flash card on quizlet 
+
+			question: tell me about yourself
+
+			answer: "I'm Taylor. I'm a dev and recently I've been coding an iphone app with 2 other developers, leveraging react native and a server with express that has JSON web tokens and MySQL. I've spent a lot of my days recently working on _______. Before that I worked on ____ with another two developers where we used Express.js, MySQL, ___, ____, ___, ___. I'd love to walk you through the react native app more."
+
+			by practicing this you'll be ready to guide the interview instead of having the interview guide you.
+
+		react
+			https://github.com/sudheerj/reactjs-interview-questions
+
+			https://github.com/Pau1fitz/react-interview
+
+			https://www.edureka.co/blog/interview-questions/react-interview-questions/
+
+		general front end
+			https://github.com/h5bp/Front-end-Developer-Interview-Questions
+
+		system design (more for senior level devs - but good to understand one problem before going to your interviews)
+			
+			how would you build twitter for scale?
+
+			system design cheat sheet!
+				https://gist.github.com/vasanthk/485d1c25737e8e72759f
+
+			https://medium.freecodecamp.org/how-to-system-design-dda63ed27e26
+
+			https://github.com/shashank88/system_design
+
+				great links to engineering blogs of big companies where they talk about system design all the time
+
+		https://www.hackerrank.com/
+
+		https://leetcode.com/
+
+		https://projecteuler.net/
+
+		https://www.coderbyte.com/
+
+		https://www.codewars.com/
+
+		https://www.codility.com/pricing
+			- sign up for a free trial and try the problems that companies give out
+
+		https://www.pramp.com/#/
+			- get live interviewed by developers
+
+		not free but goes into computer science really well - recommended by steven
+
+			https://www.interviewcake.com/upgrade
+
+			perhaps you can group up and buy it together to save money
+
+	* learn redux
+
+		https://www.valentinog.com/blog/react-redux-tutorial-beginners/
+			best blog write up
+
+		https://learnredux.com/
+			videos for free by wes bos
+
+	* Watch a talk and take notes
+
+		these talks cost thousands of dollars, but you can watch them for free!
+
+		https://www.youtube.com/user/Confreaks/playlists
+
+		https://www.youtube.com/user/jsconfeu/playlists
+
+		https://www.youtube.com/user/GoogleDevelopers/playlists
+
+		https://www.youtube.com/user/jquery/playlists
+
+		https://www.youtube.com/channel/UCQPYJluYC_sn_Qz_XE-YbTQ/playlists
+
+		https://www.youtube.com/user/FacebookDevelopers/playlists
+
+		https://www.youtube.com/user/FacebookDevelopers/playlists
+
+		https://www.youtube.com/user/OreillyMedia/playlists
+
+		https://www.youtube.com/watch?v=B1F4Jv8re60&list=PLEx5khR4g7PKqVew27D3jvMknjxjowoKl
+
+		https://www.dotconferences.com/talks
+
+	* Go to events
+
+		hackathons
+
+			https://devpost.com/
+
+			don't go to hackathon with the mindset of winning, go there looking for people who are experienced but don't care about winning. And pair programming with them the entire time, take notes, get your environment set up - ask them questions - buy them coffee
+
+				If they care about winning then they came with a team of designers, back-end, front-end engineers that have all looked up the APIs and dependencies in advance and in some cases they came with their hackathon project finished - cheating :(
+
+
+		meetups/conferences/hackathons
+
+			https://www.eventbrite.com/
+
+			https://www.eventbrite.com/d/ca--berkeley/hackathon/
+			
+			meetup.com
+
+			The best unknown secret of SF:
+	
+				https://www.noisebridge.net/wiki/Category:Events#Mondays
+
+			The best unknown secret of oakland:
+
+				https://sudoroom.org/calendar/
+
+	* learn from the best
+
+		linkedin.com/learn
+			pick something you're interested in and go learn it
+
+			they provide the code and videos from vetted individuals
+
+			free 30 day trial, use privacy.com to make a virtual credit card that is paused
+
+			for example - this is the best machine learning course out there:
+
+				https://www.linkedin.com/learning/machine-learning-ai-foundations-value-estimations
+
+					- the guy makes it simple! all the code samples work - ask pavan if you need help - he taught it
+
+		newboston: https://www.youtube.com/user/thenewboston/playlists
+
+		leveluptuts: https://www.youtube.com/channel/UCyU5wkjgQYGRB0hIHMwm2Sg
+
+		wesbos: https://www.youtube.com/user/wesbos/playlists
+
+		the best content is on linkedin learn and the new boston
+
+			they're better than udacity, udemy and any bootcamp
+
+		also 
+			watch pavan whiteboard for interviews while getting interviewed by ken, a Career Director
+			    https://www.youtube.com/watch?v=_du_oTycAos&t=0s&list=PLQHSrcR-RsBRfA1Em9LhoBWi5VjAJuZcE&index=3
+
+			sql interview prep with Pavan:
+				video: https://youtu.be/1_5MvRyr2gI
+
+				questions and answers: https://docs.google.com/document/d/1N866KkjB2x7EINQ4c0jhpstw8dUx1pnb8B652BiBhv0/edit
+
+			python questions and answers with Pavan: 
+				video: https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7ce0da70-a08d-469e-a492-33554fb16532              
+				questions and answers: https://github.com/pavankat/python-fun/blob/master/python-review-quiz.py
+
+			an interviewing video series hosted by Pavan with guest stars from former students who work in the industry around the country
+
+				https://www.youtube.com/watch?v=0hDMAPUzUUk&list=PLQHSrcR-RsBQSCvXWSUjEDOx3xmChPISp&index=1
+
+	* take another class
+
+		https://www.uopeople.edu/programs/cs/degrees/computer-science-bachelor-degree-2/
+
+			free com sci degree - they'll take a ton of transfer credits
+
+				- you have to pay to take exams, but you can choose to not take any exams and have it be free from what I understand
+
+	* https://www.ccsf.edu/freecity
+
+		free for SF residents
+			- only if you pass it with a C or above
+
+		otherwise $120 to $180 plus $20 to $40 for registration
+
+How to approach applying for jobs
+	
+	the more you flatter people in interviews
+	the more it makes them like you haha
+	and remember you
+
+		so you need to research the wins that a company has
+
+		what you say in the interview: "it's incredible that you're part of ___company name goes here____ that contributes to the open source community, won the ____award name goes here____ award and _______. You've basically made it. I would be honored and thrilled to be part of that team and help continue contributions towards those wins.
+
+
+
+Other stuff
+	
+	sample resume you can make yours off of
+		https://drive.google.com/file/d/0B0yVL2uttaB2TXd4NkRQcnpKVVU/view
+
+		always drive with your code first and education and previous job experience last (unless it's tech related)
+
+	my old data analytics syllabus
+
+		https://docs.google.com/spreadsheets/d/1aPE2kXca6PMfWcUmZuDbFBKo4GssIMzOpwoMBds2Efg/edit#gid=0
+
+	Google's interview process by Prateek Gupto, a former student of mine (he works there)
+
+		https://docs.google.com/spreadsheets/d/1AYqnOt114HIX3L3AzpLtvRGK_NQw-VZNR3QNV7v2Zlg/edit#gid=813040205
+
+	best excel resource how to out there
+		http://www.excel-easy.com/	
+			- the site has a downloadable example on the middle right of the page for each topic
+
+	Deployments
+
+		express/mysql
+			https://github.com/pavankat/groupOnClone
+
+		express/mongodb and react app working together
+			https://github.com/pavankat/create-react-app-four
+
+		https://github.com/pavankat/flask-ml
+			python flask app
+
+		other resources
+			https://github.com/mars/create-react-app-buildpack
+
+			https://blog.heroku.com/deploying-react-with-zero-configuration
+
+			

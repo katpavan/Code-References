@@ -1,0 +1,34 @@
+there are two ways you can make a git repository on your computer
+
+	1. you can do git clone <repourl>
+
+	2. you can make a folder and you can do this command
+
+		git init
+
+			git init or git clone make a .git folder - it's hidden so the only way you can see it is if you do
+
+				ls -la
+
+git branch
+	shows the branches you have
+
+
+$ git remote -v
+
+	shows you any cloud repositories that are connected to your local repository
+
+$ git remote add origin git@github.com:katpavan/branch-exercise.git
+	
+	this is how you connect your local repository to a cloud repository
+
+$ git remote -v
+	origin	git@github.com:katpavan/branch-exercise.git (fetch)
+	origin	git@github.com:katpavan/branch-exercise.git (push)
+
+		this is what it would look like if you did connect it
+
+$ git remote remove origin
+	
+	this is how you remove the connection
+

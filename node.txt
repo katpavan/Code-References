@@ -1,0 +1,256 @@
+
+
+----------------------------------------------------------
+
+MONGODB
+
+//Creating a collection in Mongodb
+
+const courseSchema = new mongoose.Schema({
+    name: String,
+    author: String,
+    tags: [String],
+    date: { type: Date, default: Date.now },
+    isPublished: Boolean,
+});
+
+const Course = mongoose.model('Course', courseSchema);
+
+async function createCourse(){
+    const course = new Course({
+        name: 'Node.js Course',
+        author: 'Mosh',
+        tags: ['node','backend'],
+        isPublished: true,
+    });
+
+    const result = await course.save();
+    console.log(result);
+}
+
+createCourse();
+
+
+//Querying Documents
+
+//Comparison Operators
+
+    // eq (equal)
+    // ne (not equal)
+    // gt (greater than)
+    // gte (greater than or equal to)
+    // lt (less than)
+    // lte (less than or equal to)
+
+        .find({ author: 'Mosh', isPublished: true }) //retrive objects that have the author of mosh and is true
+        .find({ price: { $gt: 10, $lte: 20 } }) //retrieve an object that has a price that is greater than 10 and less than or equal to 20
+	.or([{ author: 'Mosh' }, { isPublished: true }]) //get courses that is authored by Mosh OR published
+	.find({author: /^Mosh/}) //using regular expressions, author starts with Mosh
+	.find({author: /Hamedanis$/}) //author ends with Hamedani
+----------------------------------------------------------
+
+INQUIERER
+//Use this instead of process.argv 
+//Makes it a lot easier for the user
+
+// Load the NPM Package inquirer
+var inquirer = require("inquirer");
+
+// Create a "Prompt" with a series of questions.
+inquirer
+  .prompt([
+    // Here we create a basic text prompt.
+    {
+      type: "input",
+      message: "What is your name?",
+      name: "username"
+    },
+    {
+      type: "password",
+      message: "Set your password",
+      name: "password"
+    },
+    // Here we give the user a list to choose from.
+    {
+      type: "list",
+      message: "Which Pokemon do you choose?",
+      choices: ["Bulbasaur", "Squirtle", "Charmander"],
+      name: "pokemon"
+    },
+    {
+      type: "confirm",
+      message: "Are you sure:",
+      name: "confirm",
+      default: true
+    }
+ 	])
+  .then(function(inquirerResponse) {
+    // If the inquirerResponse confirms, we displays the inquirerResponse's username and pokemon from the answers.
+    if (inquirerResponse.confirm) {
+      console.log("\nWelcome " + inquirerResponse.username);
+      console.log("Your " + inquirerResponse.pokemon + " is ready for battle!\n");
+    }
+    else {
+      console.log("\nThat's okay " + inquirerResponse.username + ", come again when you are more sure.\n");
+    }
+  });
+
+---------------------------------------------------------
+
+PROMISE
+
+//Create a new promise and give it to a const
+const p1 = new Promise((resolve, reject) => {
+    setTimeout( () => {
+        console.log('Async operation 1');
+        resolve(1);
+    },2000);
+})
+
+//Promises in Parallel
+Promise.all([p1,p2])
+    .then(result => console.log(result))
+    .catch(err => console.log('Errir', err.message));
+
+----------------------------------------------------------
+
+Joi
+
+const  Joi = require('joi);
+
+const schema = {
+    "name" : Joi.string().min(3).required()
+}
+
+const result = Joi.validate(req.body, schema);
+console.log(result)
+
+
+Function validateObject(objectName){
+const schema = {
+    "name" : Joi.string().min(3).required()
+}
+Return Joi.validate(req.body, schema);
+}
+
+------------------------------------------------------------
+
+DEBUG
+
+//CL
+export DEBUG=app:startup
+
+const debug = require('debug')('app:startup');
+debug('Morgan enabled...');
+
+------------------------------------------------------------
+
+PORT
+
+Const port = process.env.PORT || 3000;
+App.listen(port, ()=> console.log(`Listening on port ${port}...`));
+
+
+------------------------------------------------------------
+GET REQUEST
+
+app.get('/vidly.com/api/genres/:id', (req, res) => {
+    const genre = movieGenres.find(c => c.id === parseInt(req.params.id));
+    if (!genre) return res.status(404).send('This ID was not found');
+
+    res.send(genre);
+	// genre will be the whole object that was specified in the path
+});
+
+-------------------------------------------------------------
+POST REQUEST
+
+app.post('/api/courses', (req, res) => {
+  const { error } = validateCourse(req.body); //result.error
+  if (error) return res.status(400).send(error.details[0].message);
+
+
+  const course = {
+    id: courses.length + 1,
+    name: req.body.name
+  };
+  courses.push(course);
+  res.send(course);
+});
+
+
+-------------------------------------------------------------
+
+CUSTOM MIDDLEWARE
+
+//logger.js
+function log(req, res, next) {
+    console.log('Logging....');
+    next();
+};
+
+module.exports = log;
+
+//index.js
+const logger = require('./logger');
+app.use(logger);
+
+-------------------------------------------------------------
+THIRD PARTY MIDDLEWARE
+
+
+
+-------------------------------------------------------------
+
+BUILT-IN FUNCTIONS
+
+Var f = require('fs');
+
+//READ FILE CONTENT
+Var contents = f.readFileSync('fileName.txt','utf8'); //exports all contents of this .txt file
+
+//WRITE TO FILE
+f.appendFile('bankLedger.txt', `\n'SUCKS FOR YOU'-20 ,T ${newTotal}` ,function(err){
+                    if(err) console.log(err);
+                });
+-------------------------------------------------------------
+
+PROCESS.ARVG
+
+function commands(){
+    operations = {
+        "reverse": function (str) {
+            let result = [];
+            for (let i in str) {
+                result.push(str[i]);
+            }
+            return result.reverse().join('');
+        },
+        "evenOrOdd": function (num) {
+            return parseInt(num)%2 == 0 ? 'Even' : 'Odd';
+        }
+    }
+}
+
+commands();
+console.log(operations[process.argv[2]](process.argv[3]));
+
+-------------------------------------------------------------
+TERMINAL MESSAGES
+
+body-parser deprecated undefined extended: provide extended option index.js:7:17
+
+app.use(express.urlencoded()); 
+//pass an object inside of the function set extended to true
+
+app.use(express.urlencoded({ extended: true })); 
+
+-------------------------------------------------------------
+COMMAND LINE COMMANDS NODE
+
+export NODE_ENV = production 
+export NODE_ENV = development
+
+-------------------------------------------------------------
+-------------------------------------------------------------
+

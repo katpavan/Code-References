@@ -1,0 +1,236 @@
+INSTALLING MYSQL
+
+brew install mysql
+
+sudo chown -R $(whoami) /usr/local/Cellar/openssl/
+
+brew install mysql
+
+brew tap homebrew/services
+
+brew services start mysql
+
+then to check if it works
+
+mysql -V
+
+//FIND MYSQL LOCATION
+brew info mysql
+
+//CHANGE MYSQL PASSWORD
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password'
+
+//RUN MYSQL FROM TERMINAL
+mysql -u root -p
+
+---------------------------------------------------------------------------------
+
+//INSERT
+INSERT INTO pets (pet_type,pet_name,student_id)VALUES('dog','Rocket','5');
+
+-----------------------------------------------------------------------------------------
+
+//RUN .SQL FILE
+Source <filename>
+
+-----------------------------------------------------------------------------------------
+
+//CREATE DATABASE
+CREATE DATABASE friends_db
+
+-----------------------------------------------------------------------------------------
+
+//CONNECT TO DATABASE
+USE friends_db
+
+-----------------------------------------------------------------------------------------
+
+//CREATE TABLE
+CREATE TABLE students (
+    id INT AUTO_INCREMENT, 
+    name VARCHAR(255),
+    favorite_food VARCHAR(255),
+    PRIMARY KEY(id)
+);
+
+-----------------------------------------------------------------------------------------
+
+//CREATE NEW TABLE WITH REFERENCE ID
+CREATE TABLE pets (
+    id INT NOT NULL AUTO_INCREMENT,
+    pet_type VARCHAR(255) NOT NULL,
+    pet_name VARCHAR(255) NOT NULL,
+    student_id INT NOT NULL,
+    FOREIGN KEY (student_id) REFERENCES students(id),
+    PRIMARY KEY (id)
+);
+
+-----------------------------------------------------------------------------------------
+
+//INSERTING INTO TABLE
+INSERT INTO students (name, favorite_food) VALUES ("Nicholas", "Macaroni and cheese"), ("Khoa", "Ramen");
+
+-----------------------------------------------------------------------------------------
+
+//CREATE DATABASE IF THE NAME DOES NOT EXIST
+CREATE DATABASE db_name IF NOT EXISTS;
+
+-----------------------------------------------------------------------------------------
+
+//DELETING DATABASE IF IT EXISTS
+DROP DATABASE IF EXISTS db_name;
+
+--------------------------------------------------------------------------------
+//DELETING A ROW FROM A TABLE
+DELETE FROM table_name WHERE condition;
+
+-----------------------------------------------------------------------------------------
+
+/* this will get us every column from the tvshows table */
+SELECT * 
+FROM tvshows;
+
+/* this will get us every column from the ratings table */
+SELECT *
+FROM ratings
+
+/* this will get us the values for the name_of_person column and the rating column from the ratings table */
+SELECT name_of_person, rating
+FROM ratings;
+
+
+/* this will get us the values for the name_of_person column and the rating column from the ratings table 
+
+AND will order the rows by the rating column in ascending value (meaning the lowest will be first)
+*/
+
+	/* one way of writing this */
+		SELECT name_of_person, rating
+		FROM ratings
+		ORDER BY rating;
+
+	/* another way of writing this */
+		SELECT name_of_person, rating
+		FROM ratings
+		ORDER BY rating ASC;
+
+/* this will get us the values for the name_of_person column and the rating column from the ratings table 
+
+AND will order the rows by the rating column in descending order (meaning the highest will be first)
+*/
+
+	SELECT name_of_person, rating
+	FROM ratings
+	ORDER BY rating DESC;
+
+/* get all the ratings that are 9 or above */
+	SELECT *
+	FROM ratings
+	WHERE rating >= 9;
+
+/* get all the ratings that are 9 or above */
+	SELECT *
+	FROM ratings
+	WHERE rating >= 9;
+
+
+/* get all the ratings that are 9 or above */
+	SELECT *
+	FROM ratings
+	WHERE rating >= 7 AND (name_of_person = 'Haven' OR name_of_person = 'Aaron');
+
+
+/* AGGREGATE QUERIES */
+	
+	/* count the number of rows in the tvshows table */
+	SELECT COUNT(*)
+    FROM tvshows;
+
+    /* lowest value in the rating column of the ratings table */
+    SELECT MIN(rating) FROM ratings;
+
+    /* highest value in the rating column of the ratings table */
+    SELECT MAX(rating) FROM ratings;
+
+    SELECT AVG(rating) FROM ratings;
+
+    SELECT SUM(rating) FROM ratings;
+
+/* group by with an aggregate */
+
+	SELECT AVG(rating), tvshow_id
+	FROM ratings
+	GROUP BY tvshow_id;
+
+	SELECT MAX(rating), tvshow_id
+	FROM ratings
+	GROUP BY tvshow_id;
+
+/* THIS IS WRONG - You cannot use WHERE on an aggregate */
+	SELECT MAX(rating), tvshow_id
+	FROM ratings
+	GROUP BY tvshow_id
+	WHERE MAX(rating) = 10;
+
+		/* THIS IS CORRECT */
+
+			SELECT MAX(rating), tvshow_id
+			FROM ratings
+			GROUP BY tvshow_id
+			HAVING MAX(rating) = 10;
+
+----------------------------------------------------------------------------
+-- write a query to get you all the favorites and the names of the corresponding users and the names of the corresponding foods
+SELECT favorites.food_id, foods.name, users.name
+FROM favorites
+INNER JOIN users 
+ON favorites.user_id=users.id
+INNER JOIN foods
+ON favorites.food_id=foods.id;
+
+-----------------------------------------------------------------------------
+//SET RANGE FOR A COLUMN
+-- answers
+-- 	question_id - integer
+-- 	person_id - integer
+-- 	answer - integer 0 - 10
+CREATE TABLE answers (
+    id INT NOT NULL AUTO_INCREMENT,
+    question_id INT NOT NULL,
+    person_id INT NOT NULL,
+    answer INT NOT NULL,
+    FOREIGN KEY (question_id) REFERENCES questions(id),
+    FOREIGN KEY (person_id) REFERENCES people(id),
+    PRIMARY KEY (id),
+    CHECK (answer >= 0),
+    CHECK (answer <= 10)
+);
+
+-------------------------------------------------------------------------------
+//PARTITION BY
+SELECT sales_employee, sale,SUM(sale) OVER(PARTITION BY sales_employee) total_sales
+FROM sales
+ORDER BY sales_employee;
+
+--------------------------------------------------------------------------------
+//NODE
+var mysql = require('mysql');
+
+var con = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "password",
+    database: "sales_db"
+});
+
+con.connect(function (err, result) {
+    if (err) throw err;
+    console.log("Connected!");
+    var sql = "SELECT * FROM sales"
+    con.query(sql, function (err, result) {
+        if (err) throw err;
+        console.log('Query Success!');
+        console.log(result)
+    })
+});
+
