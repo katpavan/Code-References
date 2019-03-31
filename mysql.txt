@@ -12,7 +12,7 @@ brew services start mysql
 
 then to check if it works
 
-mysql -V
+mysql -V/Users/Khoa/Desktop/code-ref/mysql.txt
 
 //FIND MYSQL LOCATION
 brew info mysql
