@@ -23,6 +23,9 @@ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password
 //RUN MYSQL FROM TERMINAL
 mysql -u root -p
 
+//RUN MYSQL FILE FROM TERMINAL
+mysql -u root -p < schema.sql
+
 ---------------------------------------------------------------------------------
 
 //INSERT

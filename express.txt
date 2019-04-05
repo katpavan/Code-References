@@ -18,7 +18,119 @@ app.use(express.static("public"));
 
 ---------------------------------------------------------------------------
 ---------------------------------------------------------------------------
+MYSQL
+
+//SELECTING FROM DATABASE w/ AJAX CALL
+
+			//app.js
+app.use(express.static("public"));
+
+var mysql      = require('mysql');
+var connection = mysql.createConnection({
+  host     : 'localhost',
+  user     : 'root',
+  password : 'password',
+  database : 'cats_db'
+});
+ 
+connection.connect();
+
+app.get('/cats.json', function(req, res){
+	connection.query('SELECT * FROM cats', function (error, results, fields) {
+	  if (error) res.send(error)
+	  else res.json(results);
+	});
+});
+
+			//cats-select.js
+function getCats(){
+	$('div').empty();
+
+	$.ajax({
+		url: '/cats.json',
+		method: 'GET'
+	}).then(function(cats){
+		for (var catIndex in cats){
+			// console.log(catIndex);
+			// console.log(cats[catIndex]);
+			// console.log(cats);
+
+			var p = $('<p>'); // <p></p>
+
+			//one way
+				// p.text(JSON.stringify(cats[catIndex]))
+
+			//another way
+				// p.text("id: " + cats[catIndex].id + ", cat name: " + cats[catIndex].cat_name)
+
+			//another way
+				p.text(`id: ${cats[catIndex].id}, cat name: ${cats[catIndex].cat_name}`)
+
+		//created a link that will provide the link to delete
+				var a = $('<a>'); //<a></a>
+				a.text('delete'); //<a>delete</a>
+				a.attr('href', '/cats-delete?cat_id=' + cats[catIndex].id)
+				//<a href='/cats-delete?cat_id=3'>delete</a>
+
+				p.append(a);
+
+
+
+
+			$('div').prepend(p);
+		}
+	})
+}
+
 ---------------------------------------------------------------------------
+INSERTING NEW ROWS INTO DB
+
+				//app.js
+app.get('/cats-insert', function(req, res){
+	connection.query('INSERT INTO cats (cat_name) VALUES (?)', [req.query.cat_name],function (error, results, fields) {
+	  if (error) res.send(error)
+	  else res.json({
+	  	message: 'success'
+	  });
+	});
+});
+
+				//index.html body
+<form>
+	<input type="text" name="cat_name" placeholder="give a cat name">
+
+	<button>insert the cat</button>
+</form>
+
+				//cats-insert.js
+$('form').submit(function(e) {
+
+    e.preventDefault(); // avoid to execute the actual submit of the form.
+    var cn = $( "input[name='cat_name']" ).val();
+
+	$.ajax({
+		url: '/cats-insert',
+		method: 'GET',
+		data: {cat_name : cn}
+	}).then(function(message){
+		getCats();
+	});
+
+});
+
+---------------------------------------------------------------------------
+DELETE ROW FROM TABLE
+					//app.js
+app.get('/cats-delete', function(req, res){
+	connection.query('DELETE FROM cats WHERE id = (?)', [req.query.cat_id],function (error, results, fields) {
+	  
+	  res.redirect('/');
+	
+	});
+});
+
+					//
+
 ---------------------------------------------------------------------------
 ---------------------------------------------------------------------------
 ---------------------------------------------------------------------------

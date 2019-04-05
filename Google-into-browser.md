@@ -15,7 +15,7 @@
 * Cellular data network
 
 ## 4. Finding the correct server
-...With the IP address, the request package travels from the local area network (LAN) to the wide area network (WAN) and back down to a LAN of the destination server.
+... With the IP address, the request package travels from the local area network (LAN) to the wide area network (WAN) and back down to a LAN of the destination server 
 ...When the destination server recieves the request, it will send back the HTML file to your pc.  These files may be large and sent in many pieces.
 
 ## Notes
