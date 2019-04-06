@@ -131,7 +131,30 @@ app.get('/cats-delete', function(req, res){
 
 					//
 
+
+
 ---------------------------------------------------------------------------
+USING FORM TO HIT ROUTE
+
+					//index.html
+	<form action="/animals-insert-form?_method=PUT" method="POST">
+		<input type="text" name="animal_name" placeholder="give an animal name">
+
+		<button>insert the animal</button>
+	</form>
+
+					//app.js
+var methodOverride = require('method-override')
+app.use(methodOverride('_method'))
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
+app.put('/animals-insert-form', function (req, res) {
+	connection.query('INSERT INTO animals (animal_name) VALUES (?)', [req.body.animal_name], function (error, results, fields) {
+		if (error) res.send(error)
+		else res.redirect('/');
+	});
+});
+
 ---------------------------------------------------------------------------
 ---------------------------------------------------------------------------
 ---------------------------------------------------------------------------
