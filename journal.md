@@ -28,6 +28,6 @@
 ### Using Forms instead of Ajax
 - Forms are used when you dont want to use javascript
 - If its a simple application, maybe extra js is not needed
-- `action: URL` and `method= PUT`
+- `action: URL?_method=PUT` and `method= POST`
 - Use `res.redirect('/')` to allow the page to just reload
 
