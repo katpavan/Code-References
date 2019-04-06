@@ -15,7 +15,10 @@
 
 ### Using Post vs Get
 - Using `POST` will not allow the user to continuously carry out an action mapped to that route
-- `GET` requests are sent through the url, which can be bookmarked and sent to multiple users.
+- `POST` requests are sent through the req.body object.  To read this obj server side, you need body parser.
+- `GET` requests are sent through the url (it can be accessed from the browser), which can be bookmarked and sent to multiple users.
+- By virtue of these properties, never use `GET` for routes that will alter or update the DB.
+- `GET` should only be used to read the data
 
 ### [MethodOveride](https://www.npmjs.com/package/method-override)
 - `PUT` and `DELETE` is not built into express.  This 'hard-codes' it in so we can use it.
@@ -31,3 +34,22 @@
 - `action: URL?_method=PUT` and `method= POST`
 - Use `res.redirect('/')` to allow the page to just reload
 
+
+## 4/6/9
+### EJS (Embedded JS)
+- These templates allow you to mix the html and js together
+- Linking html elements from separate html file allows elements to be reused on multiple pages.  Updating a file once will update on all the pages that uses it.
+- This is an alternative to making ajax calls and displaying information to the page
+- Integrating ejs into express:
+    `app.set('view engine', ejs);`
+- The `public` folder is still needed for images and links or serving a single page up front.  *But use EJS*
+- `res.render(pages/animals',{data})` looks for a folder called `views` and look for a file named animals.
+
+### Sessions
+- This needs `cookie-parser` and `express-session`
+- This allows a user to stay logged in for multiple pages
+- Simlar to localStorage on the browser. 
+- Syntax : `res.session.na`
+- Restarting the server will dump all the sessions
+- To manual dump session :
+    `req.session.destroy()`
