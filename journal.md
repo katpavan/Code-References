@@ -53,3 +53,8 @@
 - Restarting the server will dump all the sessions
 - To manual dump session :
     `req.session.destroy()`
+
+## 4/9/9
+### Sessions
+- the `req.session.na` object is basically an object that is global to the entire server.  This allows the object to be continously read by other routes.
+- 
