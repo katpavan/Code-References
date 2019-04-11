@@ -57,4 +57,18 @@
 ## 4/9/9
 ### Sessions
 - the `req.session.na` object is basically an object that is global to the entire server.  This allows the object to be continously read by other routes.
-- 
+
+### Prepared Statement
+- using `?` in a SQL query and to keep the user from directly sending queries to the database
+
+### bcrypt.js
+-   `bcrypt.genSalt(10, function(err, salt) `
+- creates a `salt` which is randomly generated characters
+- the salt is then used to encrypt the raw password together
+- `bcrypt.hash(req.params.password, salt, function(err, p_hash) { `
+
+## 4/10/9
+### Sending Data w/ Form and POST
+- When sending sensitive data, make sure to use `POST` request instead of `GET`.  Post will be sent through the body object but get requests will be sent through the url.
+- In the input of each data, specify a `name` attribute or else the information will not have a key in the object. Ex:
+    - `<input name="emai">`
