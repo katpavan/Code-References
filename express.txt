@@ -1,4 +1,19 @@
 EXPRESS
+
+
+SAMPLE AJAX CALL TO GET REQUEST
+
+//JS FILE
+    $.ajax({
+        type: "GET",
+        url: '/icons-to-home',
+        data: { si: selectedIcons }
+    })
+
+//SERVER ROUTE
+app.get('/icons-to-home', (req, res) => {
+    console.log(req.query.si)
+});
 ---------------------------------------------------------------------------
 ROUTE URL PARAMETERS
 
