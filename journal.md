@@ -77,3 +77,9 @@
 
 ### File Path in Browser
 - When referencing paths in the browser, the path will begin at the root of the folder.  Its is not needed to find the path out of the current folder.
+
+## 4/13/9
+### jQuery Attr
+- When accessing the attr of a jquery element, you cannot use a variable because the attr. is not a function of a newly created variable
+
+
