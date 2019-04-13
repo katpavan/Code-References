@@ -82,5 +82,6 @@
 ### jQuery Attr
 - When accessing the attr of a jquery element, you cannot use a variable because the attr. is not a function of a newly created variable
 - For example: `var allIcons = $('.allIcons'), allIcons.attr('name')` will not work.
+- Instead, dont use a variable at all and just call attr. directly from the jquery element
 
 
