@@ -84,4 +84,3 @@
 - For example: `var allIcons = $('.allIcons'), allIcons.attr('name')` will not work.
 - Instead, dont use a variable at all and just call attr. directly from the jquery element
 
-jfjfjf
