@@ -72,3 +72,8 @@
 - When sending sensitive data, make sure to use `POST` request instead of `GET`.  Post will be sent through the body object but get requests will be sent through the url.
 - In the input of each data, specify a `name` attribute or else the information will not have a key in the object. Ex:
     - `<input name="emai">`
+
+## 4/11/9
+
+### File Path in Browser
+- When referencing paths in the browser, the path will begin at the root of the folder.  Its is not needed to find the path out of the current folder.
