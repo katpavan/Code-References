@@ -1,5 +1,18 @@
 EXPRESS
 
+POST REQUEST USING FORM
+//HTML
+                    <form id="newUserSignUp">
+                        <input type="name" name="userName" placeholder="Your name" required>
+                        <input type="email" name="email" placeholder="Email address" required>
+                        <input type="password" name="password" placeholder="Password" required>
+                        <button>Submit</button>
+                    </form>
+
+
+
+
+---------------------------------------------------------------------------
 
 SAMPLE AJAX CALL TO GET REQUEST
 
