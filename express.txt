@@ -9,7 +9,29 @@ POST REQUEST USING FORM
                         <button>Submit</button>
                     </form>
 
+//JS
+$('#newCustomIcon').submit(function (e) {
+    e.preventDefault();
+    $.ajax({
+        url: '/newCustomIcon',
+        method: 'POST',
+        data: {
+            foodName: $("#newCustomIcon input[name='foodName']").val(),
+            expiration: $("#newCustomIcon input[name='expiration']").val(),
+        }
+    }).then(function (response) {
+        console.log(response);
+        console.log('made it ajax');
+    });
+})
 
+//SERVER.JS
+app.post('/newCustomIcon', (req, res) => {
+    // con.query('INSERT INTO user_auth(userName, email, password_hash) VALUES(?,?,?)', [req.body.userName, req.body.email, p_hash], (err, results, fields) => {
+    // })
+    // res.redirect('/login/' + req.body.email + '/' + p_hash);
+    console.log(req.body.foodName + req.body.expiration);
+})
 
 
 ---------------------------------------------------------------------------
