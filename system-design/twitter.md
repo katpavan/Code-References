@@ -15,4 +15,20 @@
 
    * The whole product shoudl allow people to follow each other and view other's feeds.
 
-###
+### High Level Solution
+
+   * Divide the whole system into several core components.  You can divide by frontend/backend,  offline/online logic etc.
+
+   * Design solutions for the following two things:
+
+        1. Data modeling
+
+            * if we want to use a relational databse like MySQL, we can define user object and feed object.
+
+            * Two relations are also necessary, one user can follow each other , the other is each feed has a user owner.
+
+        2. How to serve feeds
+
+            * How to fetch feeds from all the people you follow and render them by time.
+
+    
