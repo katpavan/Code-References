@@ -100,5 +100,4 @@
 
     * Periodically crunch a large amount of accumulated data (*batch processing*)
 
-
-YES
+Updated
