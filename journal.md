@@ -99,5 +99,3 @@
     * Send a message to another process, to be handled asynchronously (*stream processing*)
 
     * Periodically crunch a large amount of accumulated data (*batch processing*)
-
-Updated
