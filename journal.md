@@ -101,3 +101,10 @@
     * Periodically crunch a large amount of accumulated data (*batch processing*)
 
     * Notes notes notes
+
+
+## 4/25/19
+
+### Basics of MongoDB
+
+* Reporting is much much easier to do with MySQL.  Don't use MongoDB for reporting.  DONT!
