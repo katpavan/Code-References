@@ -1,0 +1,5 @@
+
+use books_db
+
+db.books.find()
+

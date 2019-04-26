@@ -108,3 +108,9 @@
 ### Basics of MongoDB
 
 * Reporting is much much easier to do with MySQL.  Don't use MongoDB for reporting.  DONT!
+
+* Enterprise software would not be using a NoSQL database.  There are just too many relationships.
+
+* If you have to WRITE lots of data, web scraping, less structure use MongoDB.
+
+* 
