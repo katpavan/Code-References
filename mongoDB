@@ -1,5 +1,333 @@
 
-use books_db
+still need to organize this, but worked on it for a bit
 
-db.books.find()
+MongoDB
+	is a database
 
+	it's different from MySQL
+
+MySQL
+	is like
+		Microsoft Excel
+			columns and rows
+
+MongoDB
+	is like
+		Microsoft Word
+			it does not have columns or rows, you can put anything you want into it with no structure
+
+MySQL vs MongoDB
+
+	both are called a database
+
+	MySQL has tables, MongoDB has collections
+	MySQL has rows, MongoDB has documents
+	MySQL has columns, MongoDB has fields
+
+when do you use MySQL vs MongoDB
+	
+	you should always try to use MySQL first
+
+		MySQL is great for reporting
+
+		anything you can think of, you can come up with a SQL query for
+
+		http://www.querymongo.com/
+
+		if your data has relationships that are clear and strong 
+
+			users and pets
+
+				in pets there is a user_id
+
+	when do you use MongoDB
+
+		when you have to write a ton of data
+
+			it's great
+
+				it's faster to write data
+
+-------------------------------------------
+
+how to get mongo working on a mac
+
+	startup mongodb with brew
+
+		brew services start mongodb
+
+	then type this to use it
+		
+		mongo
+
+	to make the data folder
+
+		you might have to do
+
+		chmod 755 folderPathGoesHere
+
+			because the program probably doesn't have permission to make a folder in that directory
+
+-------------------------------------------
+
+how to get mongo working on a windows
+
+	download community server
+
+	install it
+
+	go to the c drive
+
+	go into the programs folder
+
+	click into the mongodb folder
+
+	click on the mongodb executable
+
+		now you're in
+
+	you should make a desktop shortcut to the mongodb executable
+
+	to make the data folder in the c drive
+
+		search for gitbash from your windows start menu search
+
+		right click on gitbash and run as administrator
+
+		make the data folder now
+
+
+shows all the databases:
+	show dbs
+
+
+-------------------------------------------
+
+shows database you are connected
+	db
+
+- get into the test database if it's already there; if it's not there then it'll make it
+	use test;
+
+--------------------------------------------
+
+inside a database show a list of all collections
+	show collections
+
+--------------------------------------------
+
+the _id that mongo generates can be converted to a timestamp
+
+	https://steveridout.github.io/mongo-object-time/
+
+--------------------------------------------
+SELECT
+	select * from tableName
+		db.collectionName.find()
+
+	show all from collection but in a pretty way
+		db.collectionName.find().pretty() 
+
+	FIND BY ID of the document
+		db.test.find({"_id" : ObjectId("4ecc05e55dd98a436ddcc47c")}) 
+		
+		db.test.find(ObjectId("4ecc05e55dd98a436ddcc47c"))
+
+	    find all documents that have a specific element in an array of the document
+			db.classroom.find({"hobbies": {$in: ["hobby1"]}})
+
+		get a list of everyone in your row
+			db.classroom.find({row:3})
+
+		find all the documents with a field of name and value of Steve
+			db.classroom.find({name:'Steve'})
+
+		find all the users in your row with a Mac
+			db.classroom.find({row: 3, os:'Mac'})
+
+		limit the fields that come back
+
+			You can remove the _id field from the results by specifying its exclusion in the projection, as in the following example:
+
+			db.inventory.find( { type: 'food' }, { item: 1, qty: 1, _id:0 } )
+
+		count
+			db.collection.find(<query>).count()
+
+CREATING
+	insert many at the sametime
+		db.products.insertMany( [
+		  { item: "card", qty: 15 },
+		  { item: "envelope", qty: 20 },
+		  { item: "stamps" , qty: 30 }
+		] );
+
+	insert document with array:
+	    db.classroom.insert({name: 'Steve', row:3, os:'Mac', hobbies:['Coding', 'Reading', 'Running'] })
+
+	insert one document:
+		db.classroom.insert({name: 'Steve', row:3, os:'Mac', hobbies:['Coding', 'Reading', 'Running'] })
+
+UPDATING
+	The restaurant collection contains the following documents:
+
+	{ "_id" : 1, "name" : "Central Perk Cafe", "Borough" : "Manhattan" },
+	{ "_id" : 2, "name" : "Rock A Feller Bar and Grill", "Borough" : "Queens", "violations" : 2 },
+	{ "_id" : 3, "name" : "Empire State Pub", "Borough" : "Brooklyn", "violations" : 0 }
+	
+	this updates the first document it finds
+
+	   db.restaurant.updateOne(
+	      { "name" : "Central Perk Cafe" },
+	      { $set: { "violations" : 3 } }
+	   );
+
+	this updates all of the documents it finds
+		db.books.update(
+			{ stock: { $lte: 10 } },
+			{ $set: { reorder: true } },
+			{ multi: true }
+		)
+
+		or
+
+		db.restaurant.updateMany(
+		   { violations: { $gt: 4 } },
+		   { $set: { "Review" : true } }
+		);
+
+
+	push an element into an array field of a particular document
+
+		db.students.update(
+		   { _id: 1 },
+		   { $push: { scores: 89 } }
+		)
+
+DELETING
+
+	drop the database
+		db.dropDatabase()
+
+	delete a collection
+		db.students.drop()
+
+	delete document by id
+
+		db.orders.deleteOne( { "_id" : ObjectId("563237a41a4d68582c2509da") } );
+
+	delete document by date
+		db.orders.deleteOne( { "expiryts" : { $lt: ISODate("2015-11-01T12:40:15Z") } } );
+
+	delete all documents that match
+		db.orders.deleteMany( { "client" : "Crude Traders Inc." } );
+
+		db.orders.deleteMany( { "stock" : "Brent Crude Futures", "limit" : { $gt : 48.88 } } );
+
+	remove only one
+		db.products.removeOne(...)
+
+	remove all that match
+		db.products.remove( { qty: { $gt: 20 } }, true )
+
+	empty a collection
+		db.bios.remove( { } )
+
+
+more
+	all commands listed out
+	mongo Shell Quick Reference — MongoDB Manual 3.4
+
+	https://www.tutorialspoint.com/mongodb/mongodb_dro…
+	mongo Shell Quick Reference — MongoDB Manual 3.4
+
+
+	---------------------------------------------------------------------------
+
+	To check if a field exists for any document in the collection and will return those documents that have the field:
+	$exists — MongoDB Manual 3.4
+
+	General query syntax to use: 
+	db.collectionName.find({ "fieldName": { $exists: true } }).pretty()
+	---------------------------------------------------------------------------
+	$exists — MongoDB Manual 3.4
+	  
+MongoDB
+
+	only achievable through mongoose OR with $lookup (brand new introduced in 2017)
+
+	no repeating books
+		books
+			_id, title, author
+
+		libraries
+			_id, name, books : [
+				<book _ids go here>
+			]
+
+	may have repeating books
+		ANOTHER WAY OF DESIGNING THIS DATABASE
+
+			libraries
+				{
+					_id: fksjifj, 
+					name: 'East Brunswick Public Libary', 
+					books : [
+						{_id : jdkjf8f, title: 'animorphs', author: 'K.A. Applegate'},
+						{_id : jdkjf8f, title: 'goosebumps', author: 'R.L. Stein'}
+					]
+				}
+
+	EXAMPLE:
+		books
+			_id, title, author
+
+			dskjflksdj goosebumps - rl stein
+			3qiur80h3uf animorphs - ka applegate
+
+		libraries
+			_id, name books
+			adksfjewhu9h east brunswick library  [dskjflksdj, 3qiur80h3uf]
+
+			fhibu3h2thg cranford library  [dskjflksdj, 3qiur80h3uf]
+
+MySQL
+	
+	books
+		id, title, author
+
+		1 goosebumps - rl stein
+		2 animorphs - ka applegate
+
+	libraries
+		id, name
+		1 east brunswick library
+		2 cranford library
+
+	library_books
+		book_id, library_id
+
+			1		1
+			1		2
+			2		1
+			2		2
+
+	SELECT books.id AS book_id, books.title, libararies.id AS libarary_id, libraries.name
+	FROM libraries
+	LEFT JOIN library_books
+	ON libaries.id = library_books.library_id
+	LEFT JOIN books
+	ON library_books.book_id = books.id
+
+
+
+
+
+
+
+	SELECT * 
+	FROM libraries l
+	LEFT JOIN library_books lb 
+	ON lb.library_id = l.id
+	LEFT JOIN books b
+	ON b.id = lb.book_id;
