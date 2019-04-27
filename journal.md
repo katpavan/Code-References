@@ -113,4 +113,9 @@
 
 * If you have to WRITE lots of data, web scraping, less structure use MongoDB.
 
-* 
+## 4/27/19
+
+### Cherio
+
+* Uses jquery on the backend to efficiently scrape data from html
+        - Only works if the data is loaded WITH the html, not AFTER
