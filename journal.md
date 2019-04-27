@@ -119,3 +119,5 @@
 
 * Uses jquery on the backend to efficiently scrape data from html
         - Only works if the data is loaded WITH the html, not AFTER
+
+* Using web scraping allows you to take data from any html page
