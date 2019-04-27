@@ -121,3 +121,6 @@
         - Only works if the data is loaded WITH the html, not AFTER
         - This will work for any site before 2009
 
+### Nightmare
+
+* Same as Cherio but it will work on pages made with data loaded AFTER html
