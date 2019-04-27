@@ -1,6 +1,6 @@
 EXPRESS
 
-POST REQUEST USING FORM
+POST REQUEST USING AJAX
 //HTML
                     <form id="newUserSignUp">
                         <input type="name" name="userName" placeholder="Your name" required>
@@ -33,6 +33,45 @@ app.post('/newCustomIcon', (req, res) => {
     console.log(req.body.foodName + req.body.expiration);
 })
 
+
+---------------------------------------------------------------------------
+POST REQUEST USING FORM
+
+					//html
+    <form method="POST" action="/login" class="form-signin container" id="login">
+        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required
+            autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>
+    </form>
+
+					//server.js
+app.post('/login', function (req, res) {
+    con.query('SELECT id, user_password FROM userLogin WHERE user_email = (?)', [req.body.email], (err, results, fields) => {
+        if (err) throw error;
+
+        if (results.length == 0) {
+            res.send('Try Again');
+        } else {
+            bcrypt.compare(req.body.password, results[0].user_password, (err, result) => {
+                if (result == true) {
+                    req.session.user_id = results[0].id;
+                    req.session.email = results[0].email;
+                    var userData = [req.session.user_id, req.session.email];
+                    res.render('pages/home', {
+                        data: results,
+                    });
+                } else {
+                    res.send('Wrong Password');
+                }
+            })
+        }
+    });
+})
 
 ---------------------------------------------------------------------------
 
