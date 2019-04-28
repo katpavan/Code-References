@@ -124,3 +124,16 @@
 ### Nightmare
 
 * Same as Cherio but it will work on pages made with data loaded AFTER html
+
+
+### ASCII vs Unicode
+
+* ASCII defines 128 characters, which maps to the numbers 0-127.  It uses 7-bits to define a characters.  
+
+    - Not 8 because back then, the last bit was used to avoid error as parity bits
+
+* Unicode defines around 2^21 characters, which maps to the numbers 2^21
+
+* ASCII was created with the english language in mind.  Unicode has essentially all the letters of other languages defined by the Unicode numbers.  This means that ASCII is a subset of Unicode.
+
+* Here is a great explanation of it [unicode-vs-ascii](https://stackoverflow.com/questions/19212306/whats-the-difference-between-ascii-and-unicode)
