@@ -126,6 +126,7 @@
 * Same as Cherio but it will work on pages made with data loaded AFTER html
 
 
+## 4/28/19
 ### ASCII vs Unicode
 
 * ASCII defines 128 characters, which maps to the numbers 0-127.  It uses 7-bits to define a characters.  
@@ -137,3 +138,10 @@
 * ASCII was created with the english language in mind.  Unicode has essentially all the letters of other languages defined by the Unicode numbers.  This means that ASCII is a subset of Unicode.
 
 * Here is a great explanation of it [unicode-vs-ascii](https://stackoverflow.com/questions/19212306/whats-the-difference-between-ascii-and-unicode)
+
+
+## 4/29/19
+
+* A good way to set up the database of a social network application is by using graphs.  Graphs is a data structure that consists of nodes and edges, similar to trees and linked lists.
+
+* By using BFS, you can find the shortest path between you and another user.
