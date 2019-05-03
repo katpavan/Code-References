@@ -129,9 +129,9 @@ SELECT
 		db.collectionName.find().pretty() 
 
 	FIND BY ID of the document
-		db.test.find({"_id" : ObjectId("4ecc05e55dd98a436ddcc47c")}) 
+		db.test.find({"_id" : mongojs.ObjectId("4ecc05e55dd98a436ddcc47c")}) 
 		
-		db.test.find(ObjectId("4ecc05e55dd98a436ddcc47c"))
+		db.test.find(mongojs.ObjectId("4ecc05e55dd98a436ddcc47c"))
 
 	    find all documents that have a specific element in an array of the document
 			db.classroom.find({"hobbies": {$in: ["hobby1"]}})

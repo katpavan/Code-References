@@ -145,3 +145,5 @@
 * A good way to set up the database of a social network application is by using graphs.  Graphs is a data structure that consists of nodes and edges, similar to trees and linked lists.
 
 * By using BFS, you can find the shortest path between you and another user.
+
+*
