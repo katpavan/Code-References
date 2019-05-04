@@ -1,5 +1,29 @@
-EXPRESS
+EXPRESS/Users/Khoa/Desktop/code-ref/node/express.txt
 
+
+-----------------------------------------------------------------------------------
+DEFINE ROUTES FROM EXTERNAL FILES
+
+//--------routes/api/users.js-----------//
+
+const express = require('express');
+const router = express.Router();
+
+// @route GET api/users
+// @desc Test Route
+// @access Public
+router.get('/', () => {
+    res.send('User route')
+});
+
+module.exports = router;
+
+
+
+//------------server.js-----------------//
+app.use('/api/users', require('./routes/api/users'))
+
+-----------------------------------------------------------------------------------
 POST REQUEST USING AJAX
 //HTML
                     <form id="newUserSignUp">
