@@ -174,3 +174,9 @@ Table.table>thead>tr>th*4
 
 //Counter
 	   {this.props.children}
+
+-------------------------------------------------------------------------------
+
+//PROPS VS STATE
+
+//Props is an object containing data that is being passed to a component while state is the data that is local to only that component.  
