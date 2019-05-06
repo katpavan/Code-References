@@ -48,3 +48,20 @@ CONDITIONAL STUDYING
         )
     }
 
+    //REFACTORED
+
+        render() {
+        let classes = this.getBadgeClasses();
+
+        return (
+            <div className="p-1">
+                <span className={classes}>HELLO WORLD</span>
+            </div>
+        )
+    }
+
+    getBadgeClasses() {
+        let classes = "badge m-2 badge-";
+        classes += this.state.count === 0 ? "warning" : "primary";
+        return classes;
+    }
