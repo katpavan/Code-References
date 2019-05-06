@@ -240,6 +240,38 @@ Table.table>thead>tr>th*4
 
 ----------------------------------------------------------------------------------
 
-//LIFTING THE STATE
+//Lifecyle Hooks (cannot be used in stateless functional components, only in class components)
+
+//Components go through a few phases during their lifecycle. Lifecycle hooks allow us to call methods during certain moments of a componenents lifecycle.
+
+Mounting Phase
+//this is when an instance of the component is created and inserted into the Dom
+	- constructor
+
+//this is a good place to make any updates to the state of this component
+  constructor(props) {
+    super(props);
+    console.log('App - Constructor');
+    console.log(this.props)
+  } 
+
+
+	- render
+
+	- componentDidMount
+//this is a good place to send Ajax calls to the server to return data
+
+
+
+Update Phase
+//when a component's data is updated
+	- render
+	- componentDidUpdate
+
+Unmounting Phase
+//when we delete the component from the dom
+	- componentWillUnmount
+
+
 
 
