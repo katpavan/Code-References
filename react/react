@@ -127,3 +127,20 @@ CONDITIONAL STYLING
             </div>
         )
     }
+
+---------------------------------------------------------------------------
+
+//ZEN CODING, HTML STRUCTURE SHORTCUTS
+
+Table.table>thead>tr>th*4
+
+            <table className="table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+            </table>
