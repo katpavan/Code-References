@@ -35,7 +35,7 @@ APPLY CUSTOM STYLE TO ELEMENT
 
 ----------------------------------------------------------------
 
-CONDITIONAL STUDYING
+CONDITIONAL STYLING
 
     render() {
         let classes = "badge m-2 badge-";
@@ -85,3 +85,21 @@ CONDITIONAL STUDYING
     // the key attribute is important because the virtual dom needs to know which element on the actual dom it needs to change
     // you will get an error on the console if a key is not included
 
+----------------------------------------------------------------------
+
+//CONDITIONAL RENDERING
+
+    renderTags() {
+        if (this.state.tags.length === 0) return 'There are no tags'
+
+        return <ul> {this.state.tags.map(tag => <li key={tag}>{tag}</li>)}</ul>
+    }
+
+    render() {
+        return (
+            <div className="p-1">
+                {this.state.tags.length === 0 && 'Please create a new tag'}
+                {this.renderTags()}
+            </div>
+        )
+    }
