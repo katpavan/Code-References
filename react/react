@@ -266,11 +266,21 @@ Mounting Phase
 Update Phase
 //when a component's data is updated
 	- render
-	- componentDidUpdate
+
+	- componentDidUpdate (can decided whether to make an Ajax call based on how the values have changed in the state)
+    componentDidUpdate(prevProps, prevState) {
+        console.log('prevProps', prevProps);
+        console.log('prevState', prevState);
+        if (prevProps.counter.value !== this.props.counter.value) {
+            //Ajax call and get new data from server
+        }
+    }
 
 Unmounting Phase
 //when we delete the component from the dom
-	- componentWillUnmount
+
+	- componentWillUnmount (this is called right before the component is deleted from the Dom)
+
 
 
 
