@@ -103,3 +103,27 @@ CONDITIONAL STYLING
             </div>
         )
     }
+
+--------------------------------------------------------------------------
+
+//UPDATING THE STATE
+
+//incrementing a number on button click
+    state = {
+        count: 0,
+    };
+
+    handleIncrement = () => {
+        console.log('Increment Clicked', this.state.count);
+        this.state.count++;
+        this.setState({ count: this.state.count++ });
+
+    }
+
+    render() {
+        return (
+            <div className="p-1">
+                <button onClick={this.handleIncrement} ></button>
+            </div>
+        )
+    }
