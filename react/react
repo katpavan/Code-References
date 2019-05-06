@@ -1,3 +1,29 @@
+SHORTCUTS
+
+//import component from react
+Imrc
+
+cc
+
+//stateless function component
+Sfc
+
+--------------------------------------------------------------
+
+DESTRUCTURING
+
+const { onReset, counters, onDelete, onIncrement } = this.props;
+
+//Is the same as
+
+This.props.onRest,
+this.props.counters,
+this.props.onDelete
+etc...
+
+
+--------------------------------------------------------------
+
 SETTING UP PROJECT
 
 //terminal:
@@ -215,3 +241,5 @@ Table.table>thead>tr>th*4
 ----------------------------------------------------------------------------------
 
 //LIFTING THE STATE
+
+
