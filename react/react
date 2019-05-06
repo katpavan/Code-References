@@ -202,4 +202,16 @@ Table.table>thead>tr>th*4
     <Counter onDelete={this.handleDelete} />
 
 //Counter
-    <button onClick={this.props.onDelete}>Delete</button>
+    <button onClick={() => this.props.onDelete(passInformationInHere)}>Delete</button>
+
+---------------------------------------------------------------------------------
+
+//REMOVING THE LOCAL STATE, SINGLE SOURCE OF TRUTH
+
+//A component that is being rendered by another parent component is called a controlled component.  This controlled component should not have its own local state.  If it does, any updates to the state of the parent component will not be accessible to the controlled component.
+
+//Data used by the controlled component will always be sent by the parent component
+
+----------------------------------------------------------------------------------
+
+//LIFTING THE STATE
