@@ -144,3 +144,19 @@ Table.table>thead>tr>th*4
                     </tr>
                 </thead>
             </table>
+
+------------------------------------------------------------------------------
+
+//PASSING DATA TO COMPONENTS
+
+//Evert component has a "props" object.  This object contains all the attributes of that object.  Pass information to the props of each object to use it on a lower level.
+
+//Counter
+    state = {
+        count: this.props.value
+    };
+
+//Counters
+    <Counter key={counter.id} value={4} selected={true}
+
+//This is us passing the value of 4 from the counters component to the individual counter component
