@@ -181,3 +181,25 @@ Table.table>thead>tr>th*4
 
 //Props is an object containing data that is being passed to a component while state is the data that is local to only that component.  
 //Props is also read only.  The individual component cant change the data inside of its props
+
+--------------------------------------------------------------------------------
+
+//RAISING AND HANDLING EVENTS
+
+//As a rule of thumb, the component that owns a piece of the state should be the one that is modifying it.  So if counters component is rendering multiple counter components, the counters component needs to be the one that handles any event.  
+
+//But if the event is initiated by the individual counter component, then how does the counters component access this event?  This called raising an event.  You are raising it to the higher parent component
+
+//The counter component raises the event, and the counters component handles it
+
+//Similar to passing data to a component, pass the function name through the props
+
+//Counters
+    handleDelete = () => {
+        console.log('Event handler called');
+    }
+
+    <Counter onDelete={this.handleDelete} />
+
+//Counter
+    <button onClick={this.props.onDelete}>Delete</button>
