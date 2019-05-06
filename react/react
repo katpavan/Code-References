@@ -1,0 +1,23 @@
+SETTING UP PROJECT
+
+//terminal:
+sudo create-react-app app-name
+
+//cd into app-name
+npm start
+
+---------------------------------------------------------------
+
+IMPORTING BOOTSTRAP
+
+//terminal:
+npm i BOOTSTRAP
+
+//index.js
+import 'bootstrap/dist/css/bootstrap.css';
+
+----------------------------------------------------------------
+
+GENERATE RANDOM IMAGE 
+
+imageUrl: 'https://picsum.photos/200' 
