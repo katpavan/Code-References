@@ -21,3 +21,14 @@ import 'bootstrap/dist/css/bootstrap.css';
 GENERATE RANDOM IMAGE 
 
 imageUrl: 'https://picsum.photos/200' 
+
+----------------------------------------------------------------
+
+APPLY CUSTOM STYLE TO ELEMENT
+
+    style = {
+        fontSize: 10,
+        fontWeight: 'bold'
+    };
+
+    <span style={this.styles}">Hello World</span>
