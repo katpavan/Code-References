@@ -51,11 +51,9 @@ CONDITIONAL STUDYING
     //REFACTORED
 
         render() {
-        let classes = this.getBadgeClasses();
-
         return (
             <div className="p-1">
-                <span className={classes}>HELLO WORLD</span>
+                <span className={this.getBadgeClasses()>HELLO WORLD</span>
             </div>
         )
     }
@@ -65,3 +63,25 @@ CONDITIONAL STUDYING
         classes += this.state.count === 0 ? "warning" : "primary";
         return classes;
     }
+
+---------------------------------------------------------------------------
+
+//RENDER ITEMS OF AN ARRAY OR OBJECT
+
+    state = {
+        tags: ['tag1', 'tag2', 'tag3']
+    };
+
+    render() {
+        return (
+            <div className="p-1">
+                <ul>
+                    {this.state.tags.map(tag => <li key={tag}>{tag}</li>)}
+                </ul>
+            </div>
+        )
+    }
+
+    // the key attribute is important because the virtual dom needs to know which element on the actual dom it needs to change
+    // you will get an error on the console if a key is not included
+
