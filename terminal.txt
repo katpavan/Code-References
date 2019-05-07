@@ -2,7 +2,7 @@
 
 These are the basic commands for navigating directories in a Terminal or Git Bash window
 
-### Moving in directories
+#### Moving in directories
 
 #### Change Directory
 
