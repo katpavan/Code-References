@@ -22,8 +22,6 @@ console.log(p.height);
 p.greeting();
 
 
-yes yes
-
 class Dancer extends Person {
     constructor(name, height, move, stamina) {
         // Call person constructor function and pass these to it
