@@ -21,6 +21,8 @@ let p = new Person('khoa', 5.6);
 console.log(p.height);
 p.greeting();
 
+yes
+
 
 
 class Dancer extends Person {
