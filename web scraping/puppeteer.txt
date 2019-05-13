@@ -1,0 +1,59 @@
+------------------------------------------------------------------------------------------
+
+//TYPICAL SET UP FOR AUTO SCROLL BUTTON PRESS
+
+const puppeteer = require('puppeteer');
+
+async function scrape() {
+        function wait(ms) {
+            return new Promise(resolve => setTimeout(() => resolve(), ms));
+        }
+
+        const browser = await puppeteer.launch({ headless: false, defaultViewport: null }); //this line makes the window full page
+        const page = await browser.newPage();
+        await page.goto('<web address here>');
+
+        // Get the height of the rendered page
+        let bodyHandle = await page.$('body');
+        let { height } = await bodyHandle.boundingBox();
+        await bodyHandle.dispose();
+
+        // Scroll one viewport at a time, pausing to let content load
+        const viewportHeight = 500
+        let viewportIncr = 0;
+        let pages = 0;
+
+        while (viewportIncr + viewportHeight < 27500) {
+            await page.evaluate(_viewportHeight => {
+            window.scrollBy(0, 300);
+            }, viewportHeight);
+            await wait(50);
+            viewportIncr = viewportIncr + viewportHeight;
+        }
+
+        //----------PARSE HTML HERE----------//
+
+        res.send(data)
+        insertDataIntoDB(data)
+        await browser.close();
+    };
+
+    function insertDataIntoDB(value) {
+        for (let i in value) {
+            db.scrapedData.insert({
+            //----------PARSED DATA HERE----------//
+                }
+            }, function (error, newItem) {
+                if (error) {
+                    console.log(error)
+                } else {
+                    console.log(`Success`);
+                }
+            })
+        }
+    }
+
+    scrape()
+
+
+    ------------------------------------------------------------------------
