@@ -1,6 +1,20 @@
 
 NOTES ON MONGO DB
 
+-------------------------------------------------------------------------------
+//MONGODB CALL FUNCTION STRUCTURE
+
+db.nameTracker.find().sort({ 'count': -1 }).limit(10, function (error, found) {
+        if (error) {
+            console.log(error);
+        }
+        else {
+            res.json(found)
+        }
+    });
+
+--------------------------------------------------------------------------------
+
 still need to organize this, but worked on it for a bit
 
 MongoDB
