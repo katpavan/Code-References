@@ -8,3 +8,20 @@ sudo npx create-react-app <app name here>
 
 
 ------------------------------------------------------
+
+HIDING API KEYS
+
+1. Create .env folder in root
+
+//.env
+REACT_APP_BASE_PATH = "key"
+
+2. Hide .env folder in .gitignore
+
+//.gitignore
+
+.env
+
+3. Call the key in the component you need
+
+process.env.REACT_APP_MAP_KEY
