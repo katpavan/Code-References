@@ -1,0 +1,5 @@
+-----------------------------------------------------------
+
+CHECK HEROKU CONSOLE
+
+heroku logs --tail -a <projectname>

@@ -120,7 +120,7 @@ shows all the databases:
 -------------------------------------------
 
 shows database you are connected
-	db
+	use
 
 - get into the test database if it's already there; if it's not there then it'll make it
 	use test;
