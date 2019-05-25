@@ -1,6 +1,10 @@
 
 NOTES ON MONGO DB
 
+//MUTIPLE FIELDS FOR ONE PARAMATER
+
+db.inventory.find( { qty: { $in: [ 5, 15 ] } } )
+
 -------------------------------------------------------------------------------
 //MONGODB CALL FUNCTION STRUCTURE
 
