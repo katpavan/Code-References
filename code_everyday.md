@@ -44,6 +44,27 @@
     //Any changes to y will not affect the properties of x
     ```
 
+    * **Summary:** The initial solution iterated through every value of B and checking for its occurence in the words of A.  This is _intractable_ because if letters are repeated in array B, then duplicate operations are made.
+
+    ```javascript
+    A = ["amazon","apple","facebook","google","leetcode"],
+    B = ["ec","oc","ceo"]
+
+    //Output:
+    ["facebook","leetcode"]
+    ```
+
+        A better solution would be to create a condensed array of length 26 (with each index representing a letter) and counting only the maximum orrurence of each individual sub set in B.  The reason we do this is because the largest subset check will control.
+
+    ```javascript
+    B = [0,0,1,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0]
+    //       c   e                   o
+
+    //if B = ['ooooo','e',arr]
+    B = [1,0,0,0,1,0,0,0,0,0,0,0,0,0,5,0,0,2,0,0,0,0,0,0,0,0,0]
+    //       c   e                   o     r
+    ```
+
 #### Intro to Computer Science (1-5)
 
 * 1.1 The Universal Machine
