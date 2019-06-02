@@ -26,6 +26,24 @@
         }
     }
     ```
+* wordSubsets #916 : **Attempting**
+    * Intializing a new variable with the values of an object will create a _reference_ to that object instead of a _copy_.
+    ```javascript
+    let x = {
+        'a': 1;
+        'b': 2;
+    };
+
+    let y = x;
+    y['a']--; //this will actually change the values of variable x. 
+              //y is currently referencing x, not a copy of it.
+    ```
+    * In ECMAScript 6, there is a `Object.assign` method that will create a _copy_ of an obj. Here's more [info.](https://stackoverflow.com/questions/728360/how-do-i-correctly-clone-a-javascript-object)
+    ```javascript
+    let y = Object.assign({},x);
+    //Any changes to y will not affect the properties of x
+    ```
+
 #### Intro to Computer Science (1-5)
 
 * 1.1 The Universal Machine
