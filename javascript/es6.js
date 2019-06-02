@@ -1,6 +1,6 @@
-----------------------------------------------------------
+// ---------------------------------------------------------- //
 
-Creating Classes
+//Creating Classes
 
 class Person {
     constructor(name, height) {
