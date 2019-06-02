@@ -86,3 +86,4 @@ Press `tab` key once to autocomplete once you have typed a unique portion of a f
 ### Force the deletion of local branch on your filesystem
 
 `git branch -D [name_of_your_new_branch]`
+
