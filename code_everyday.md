@@ -13,7 +13,7 @@
 ### [X] 6/2/19 
 
 #### Leetcode (1)
-1. isSelfDivisible #728 : Completed
+* isSelfDivisible #728 : **Completed**
    * Useful code block - Each digit of a number
    ```javascript
    const digitOfInt = (num) => {
