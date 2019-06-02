@@ -222,5 +222,19 @@ console.log(d.move);
 d.dance();
 d.drink();
 
+//-----------------------------------------------//
+
+FIND EACH DIGIT OF A NUMBER
+
+   const digitOfInt = (num) => {
+    if (num === 0) return false;
+    let curr = num;
+    while (curr > 1) {
+        let digit = Math.floor(curr % 10); 
+        console.log(digit);
+        curr /= 10;
+        }
+    }
+
 
 
