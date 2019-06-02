@@ -1,4 +1,4 @@
-# Do At Least One Everyday:
+# Do At Least Two Everyday:
 * Apply to one [job](https://www.indeed.com/jobs?q=full+stack+developer&l=San+Francisco%2C+CA)
 * [Leetcode](https://leetcode.com/problemset/all/) problem
 * Read 5 pages from a coding [Book](http://ce.sharif.edu/courses/96-97/2/ce153-4/resources/root/Text%20Books/An%20Introduction%20to%20Computer%20Science.pdf)
