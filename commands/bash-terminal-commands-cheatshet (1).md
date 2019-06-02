@@ -74,3 +74,15 @@ Press `tab` key once to autocomplete once you have typed a unique portion of a f
 #### Open all files and folder in current directory (PC Only)
 
 `explorer .`
+
+### Create the branch on your local machine and switch to this branch
+
+`git checkout -b [name_of_new_branch]`
+
+### Push the Branch on github
+
+`git push origin [name_of_new_branch]`
+
+### Force the deletion of local branch on your filesystem
+
+`git branch -D [name_of_your_new_branch]`
