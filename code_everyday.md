@@ -7,36 +7,85 @@
 * Go to [Noisebridge](https://www.meetup.com/noisebridge/events/) or [Sudoroom](https://sudoroom.org/calendar/) Event
 * Get AWS [certified](https://acloud.guru/learn/aws-certified-solutions-architect-associate)
 
+### Markdown Cheat [Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
 # May
-### [ ] 6/2/19
+### [X] 6/2/19 
+
+#### Leetcode
+1. isSelfDivisible #728 : Completed
+   * Useful code block - Each digit of a number
+   ```javascript
+   const digitOfInt = (num) => {
+    if (num === 0) return false;
+    let curr = num;
+    while (curr > 1) {
+        let digit = Math.floor(curr % 10); 
+        console.log(digit);
+        curr /= 10;
+        }
+    }
+    ```
+
+---
 ### [ ] 6/3/19
+
+LeetCode
+---
 ### [ ] 6/4/19
+---
 ### [ ] 6/5/19
+---
 ### [ ] 6/6/19
+---
 ### [ ] 6/7/19
+---
 ### [ ] 6/8/19
+---
 ### [ ] 6/9/19
+---
 ### [ ] 6/10/19
+---
 ### [ ] 6/11/19
+---
 ### [ ] 6/12/19
+---
 ### [ ] 6/13/19
+---
 ### [ ] 6/14/19
+---
 ### [ ] 6/15/19
+---
 ### [ ] 6/16/19
+---
 ### [ ] 6/17/19
+---
 ### [ ] 6/18/19
+---
 ### [ ] 6/19/19
+---
 ### [ ] 6/20/19
+---
 ### [ ] 6/21/19
+---
 ### [ ] 6/22/19
+---
 ### [ ] 6/23/19
+---
 ### [ ] 6/24/19
+---
 ### [ ] 6/25/19
+---
 ### [ ] 6/26/19
+---
 ### [ ] 6/27/19
+---
 ### [ ] 6/28/19
+---
 ### [ ] 6/29/19
+---
 ### [ ] 6/30/19
+---
 
 
 
