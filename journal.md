@@ -146,4 +146,3 @@
 
 * By using BFS, you can find the shortest path between you and another user.
 
-*
