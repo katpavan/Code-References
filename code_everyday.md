@@ -12,7 +12,7 @@
 # May
 ### [X] 6/2/19 
 
-#### Leetcode (1)
+#### Leetcode (2)
 * isSelfDivisible #728 : **Completed**
    * Useful code block - Each digit of a number
    ```javascript
