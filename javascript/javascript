@@ -236,5 +236,19 @@ FIND EACH DIGIT OF A NUMBER
         }
     }
 
+//-----------------------------------------------//
+
+COUNT LETTERS OF STRING 
+
+    const maxLetterCountSubset = (arr)=>{
+        const letterCount = new Array(26); // each index represents the lowercase letters
+        for(let i in arr){
+            const a = "a".charCodeAt()
+            let curr = arr[i].charCodeAt()
+            letterCount[curr-a] = (letterCount[curr-a] || 0)+1;
+        }
+        return letterCount
+    }
+
 
 

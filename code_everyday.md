@@ -87,9 +87,25 @@
   * **Main Memory (RAM or _Random Access Memory_):** The memory stores programs and data.  The CPU can only directly access information that is store in main memory.  Fast, but is volatile: _When the computer turns off, the memory is lost._  There must be a secondary memory that provides permanent storage.
   * **Hard Drive:** Is the secondary memory.
 
+#### Leetcode(1)
+
+* wordSubsets #916 : **Attempting**
+    * Useful code block - count letters of str
+    ```javascript
+    const maxLetterCountSubset = (arr)=>{
+        const letterCount = new Array(26); // each index represents the lowercase letters
+        for(let i in arr){
+            const a = "a".charCodeAt()
+            let curr = arr[i].charCodeAt()
+            letterCount[curr-a] = (letterCount[curr-a] || 0)+1;
+        }
+        return letterCount
+    }
+}
+    ```
 
 ---
-### [ ] 6/3/19
+### [X] 6/3/19
 
 #### DotJS : [Revisiting `node_modules`](https://www.dotconferences.com/2018/11/mael-nison-revisiting-node-modules)
 
