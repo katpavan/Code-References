@@ -48,7 +48,7 @@
 
     ```javascript
     A = ["amazon","apple","facebook","google","leetcode"],
-    B = ["ec","oc","ceo"]
+    B = ["ecc","oc","ceo"]
 
     //Output:
     ["facebook","leetcode"]
@@ -57,6 +57,7 @@
         A better solution would be to create a condensed array of length 26 (with each index representing a letter) and counting only the maximum orrurence of each individual sub set in B.  The reason we do this is because the largest subset check will control.
 
     ```javascript
+    //if B = ['ecc','oc','ceo']
     B = [0,0,1,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0]
     //       c   e                   o
 
