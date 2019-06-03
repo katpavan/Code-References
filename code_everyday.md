@@ -93,15 +93,14 @@
 
 #### DotJS : [Revisiting `node_modules`](https://www.dotconferences.com/2018/11/mael-nison-revisiting-node-modules)
 
-*  `node_modules` Aren't Great 
+##  `node_modules` Aren't Great 
   * There are a lot of I/O requirements for `node_modules` 
     * 30,000+ files required for a typical project, must be copied from the cache into the project folder
     * Impractical for the HTTP use case
     * Has negative runtime impact
-  * Limiting factor in the optimization space
-    * Impossible to fully optimize a dependency tree
-      * Multiple versions of the same dependency could be used, path conflicts
-      * Node will instantiate it twice
+  * Limiting factor in the optimization space : Impossible to fully optimize a dependency tree
+    * Multiple versions of the same dependency could be used, path conflicts
+    * Node will instantiate it twice
   * Permit unsafe accesses
     * Forgetting to list a package dependency in `package.json` won't necessarily break the program.  
     * This happens because of hoisting.
