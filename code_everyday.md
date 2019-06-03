@@ -91,6 +91,38 @@
 ---
 ### [ ] 6/3/19
 
+#### DotJS : [Revisiting `node_modules`](https://www.dotconferences.com/2018/11/mael-nison-revisiting-node-modules)
+
+*  `node_modules` Aren't Great 
+  * There are a lot of I/O requirements for `node_modules` 
+    * 30,000+ files required for a typical project, must be copied from the cache into the project folder
+    * Impractical for the HTTP use case
+    * Has negative runtime impact
+  * Limiting factor in the optimization space
+    * Impossible to fully optimize a dependency tree
+      * Multiple versions of the same dependency could be used, path conflicts
+      * Node will instantiate it twice
+  * Permit unsafe accesses
+    * Forgetting to list a package dependency in `package.json` won't necessarily break the program.  
+    * This happens because of hoisting.
+    
+* What is the solution?
+  * The Node resolution is to **make no assumptions**
+    * Currently: `node_modules`
+      * When a `require` call is made, node will ask it self over and over again: "Does this file exist? No? Look into the parent folder..." 
+      * This will continue until the file is found.  Node deals purely with the files and directories
+      * It knows nothing about the packages itself.
+    * Instead: `.pnp.js`
+      * yarn knows both about the packages and the independencies
+      * Instead of generating a `node_modules` folder, we would generate a single javascript file: `.pnp.js` file.
+      * It contains all the location of the packages on the disk and their dependencies.  Node will know exactly where to look for the packages by looking through the maps.  **No `require` calls are needed**
+    * Results:
+      * Faster installs in every case
+      * Immediate installs across multiple projects
+      * Strict safety mechanisms for ensure consistency
+      * Enable tight integrations with the dependency tree
+        * No risk that a project doesn't exist anymore.
+
 LeetCode
 ---
 ### [ ] 6/4/19
