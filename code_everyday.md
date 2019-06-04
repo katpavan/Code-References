@@ -92,12 +92,12 @@
 * wordSubsets #916 : **Attempting**
     * Useful code block - count letters of str
     ```javascript
-    const maxLetterCountSubset = (arr)=>{
-        const letterCount = new Array(26); // each index represents the lowercase letters
+    const maxLetterCountOfStr = (arr)=>{
+        const letterCount = new Array(26).fill(0); // each index represents the lowercase letters
         for(let i in arr){
             const a = "a".charCodeAt()
             let curr = arr[i].charCodeAt()
-            letterCount[curr-a] = (letterCount[curr-a] || 0)+1;
+            letterCount[curr-a]++;
         }
         return letterCount
     }
