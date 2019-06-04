@@ -163,6 +163,20 @@
         x = x.map(()=>9);
         // x = [9,9,9,9,9]
         ```
+
+### [Differences](https://www.activestate.com/blog/python-vs-java-duck-typing-parsing-whitespace-and-other-cool-differences/) and Similarities Between Python and Java
+
+#### Similarities
+* "Almost everything is an object" design
+* compiled down to bytecodes that run on virtual machines.
+* 
+
+#### Differences
+* Duck Typing
+    * Java is statically types, Python is dynamically typed
+    * Python: names in code are bound to strongly typed objects at runtime.  THe only condition on the type of objject a name refers to is that it supports the operations required for the particular object instances in the program.
+
+#### I honestly dont really understand this article at all.  Read later?
 ---
 ### [ ] 6/4/19
 ---
