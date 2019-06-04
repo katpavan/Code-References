@@ -250,5 +250,14 @@ const maxLetterCountOfStr = (arr)=>{
     return letterCount
 }
 
+  // COUNT MAX OCCURRENCE OF LETTERS OF A SET OF STRINGS
+
+  const maxLetterCountOfSubset = (arr)=>{
+  let result = new Array(26).fill(0);
+  for(let i in arr){
+      let letterCountOfStr = maxLetterCountOfStr(arr[i]);
+      result = result.map((letter, i) => Math.max(letter, letterCountOfStr[i]));
+  }
+  return result;
 
 
