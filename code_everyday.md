@@ -179,6 +179,24 @@
 #### I honestly dont really understand this article at all.  Read later?
 ---
 ### [ ] 6/4/19
+
+### Intro to Computer Science (5-)
+
+* 1.5 Programming Languages
+  * **Programming Languages:**  notations for expressing computations in an exact and unabigious way.
+  * **Compiling/Interpreted:** translating a high-level language into the machine language that the computer can execute
+  * **Compiler:** a complex computer program that takes another program written in a high-evel language and transltates it into an equivalent program in the machine language of the computer. The high-level program is called the _source code_ and the machine langauge is called the _machine code_.
+
+    ![pic](./img/intro-to-cs/01.png)
+    
+  * **Interpreter:** a program that simulates a computer that understands a high-level language.
+
+    ![pic](./img/intro-to-cs/02.png)
+
+  * **Compiling vs Interpreting:**
+    * compiling is a one-shot translation.  Once a program is compiled, it may be run over and over again without further need for the compiler or the source code.
+    * interpreting requires the interpreter and the source everytime for the program to run.
+
 ---
 ### [ ] 6/5/19
 ---
