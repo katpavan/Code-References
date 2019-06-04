@@ -198,7 +198,7 @@
     * interpreting requires the interpreter and the source everytime for the program to run.
     * compiled languages tend to be faster, since the translation is done once and for all.  interpreted languages lend themselves to a more flexible programming environment.
 
-### Garmet
+## Garmet
 
 #### Update: 
 * Need to scrape the entirety of Nordstrom and Madewell to deploy useable product.
