@@ -13,7 +13,7 @@
 ### [X] 6/2/19 
 
 #### Leetcode (2)
-* isSelfDivisible #728 : **Completed**
+* isSelfDivisible [#728](https://leetcode.com/problems/self-dividing-numbers/) : **Completed**
    * Useful code block - Each digit of a number
    ```javascript
    const digitOfInt = (num) => {
@@ -26,7 +26,7 @@
         }
     }
     ```
-* wordSubsets #916 : **Attempting**
+* wordSubsets [#916](https://leetcode.com/problems/word-subsets/submissions/) : **Attempting**
     * Intializing a new variable with the values of an object will create a _reference_ to that object instead of a _copy_.
     ```javascript
     let x = {
@@ -89,9 +89,10 @@
 
 #### Leetcode(1)
 
-* wordSubsets #916 : **Attempting**
-    * Useful code block - count letters of str
+* wordSubsets [#916](https://leetcode.com/problems/word-subsets/submissions/) : **Completed**
+    * Useful code blocks 
     ```javascript
+    // COUNT LETTERS OF A STRING
     const maxLetterCountOfStr = (arr)=>{
         const letterCount = new Array(26).fill(0); // each index represents the lowercase letters
         for(let i in arr){
@@ -101,8 +102,20 @@
         }
         return letterCount
     }
-}
+
+    // COUNT MAX OCCURRENCE OF LETTERS OF A SET OF STRINGS
+
+    const maxLetterCountOfSubset = (arr)=>{
+    let result = new Array(26).fill(0);
+    for(let i in arr){
+        let letterCountOfStr = maxLetterCountOfStr(arr[i]);
+        result = result.map((letter, i) => Math.max(letter, letterCountOfStr[i]));
+    }
+    return result;
     ```
+    * This problem was very difficult as the input from Leetcode was had many repeating values.  First failure was due to timeout.  The algorithm would perform duplicate iterations.  This is not optimal but much better than before
+
+
 
 ---
 ### [X] 6/3/19
