@@ -10,7 +10,7 @@
 ### Markdown Cheat [Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 # May
-### [X] 6/2/19 
+## [X] 6/2/19 
 
 #### Leetcode (2)
 * isSelfDivisible [#728](https://leetcode.com/problems/self-dividing-numbers/) : **Completed**
@@ -66,7 +66,7 @@
     //       c   e                   o     r
     ```
 
-#### Intro to Computer Science (1-5)
+### Intro to Computer Science (1-5)
 
 * 1.1 The Universal Machine
   * **Computer:**  a machine that stores and manipulate information under the control of a changeable program.
@@ -87,40 +87,13 @@
   * **Main Memory (RAM or _Random Access Memory_):** The memory stores programs and data.  The CPU can only directly access information that is store in main memory.  Fast, but is volatile: _When the computer turns off, the memory is lost._  There must be a secondary memory that provides permanent storage.
   * **Hard Drive:** Is the secondary memory.
 
-#### Leetcode(1)
-
-* wordSubsets [#916](https://leetcode.com/problems/word-subsets/submissions/) : **Completed**
-    * Useful code blocks 
-    ```javascript
-    // COUNT LETTERS OF A STRING
-    const maxLetterCountOfStr = (arr)=>{
-        const letterCount = new Array(26).fill(0); // each index represents the lowercase letters
-        for(let i in arr){
-            const a = "a".charCodeAt()
-            let curr = arr[i].charCodeAt()
-            letterCount[curr-a]++;
-        }
-        return letterCount
-    }
-
-    // COUNT MAX OCCURRENCE OF LETTERS OF A SET OF STRINGS
-
-    const maxLetterCountOfSubset = (arr)=>{
-    let result = new Array(26).fill(0);
-    for(let i in arr){
-        let letterCountOfStr = maxLetterCountOfStr(arr[i]);
-        result = result.map((letter, i) => Math.max(letter, letterCountOfStr[i]));
-    }
-    return result;
-    ```
-    * This problem was very difficult as the input from Leetcode was had many repeating values.  First failure was due to timeout.  The algorithm would perform duplicate iterations.  This is not optimal but much better than before
 
 
 
 ---
-### [X] 6/3/19
+## [X] 6/3/19
 
-#### DotJS : [Revisiting `node_modules`](https://www.dotconferences.com/2018/11/mael-nison-revisiting-node-modules)
+### DotJS : [Revisiting `node_modules`](https://www.dotconferences.com/2018/11/mael-nison-revisiting-node-modules)
 
 #####  `node_modules` Aren't Great 
   * There are a lot of I/O requirements for `node_modules` 
@@ -151,7 +124,34 @@
       * Enable tight integrations with the dependency tree
         * No risk that a project doesn't exist anymore.
 
-LeetCode
+
+### Leetcode(1)
+
+* wordSubsets [#916](https://leetcode.com/problems/word-subsets/submissions/) : **Completed**
+    * Useful code blocks 
+    ```javascript
+    // COUNT LETTERS OF A STRING
+    const maxLetterCountOfStr = (arr)=>{
+        const letterCount = new Array(26).fill(0); // each index represents the lowercase letters
+        for(let i in arr){
+            const a = "a".charCodeAt()
+            let curr = arr[i].charCodeAt()
+            letterCount[curr-a]++;
+        }
+        return letterCount
+    }
+
+    // COUNT MAX OCCURRENCE OF LETTERS OF A SET OF STRINGS
+
+    const maxLetterCountOfSubset = (arr)=>{
+    let result = new Array(26).fill(0);
+    for(let i in arr){
+        let letterCountOfStr = maxLetterCountOfStr(arr[i]);
+        result = result.map((letter, i) => Math.max(letter, letterCountOfStr[i]));
+    }
+    return result;
+    ```
+    * This problem was very difficult as the input from Leetcode was had many repeating values.  First failure was due to timeout.  The algorithm would perform duplicate iterations.  This is not optimal but much better than before
 ---
 ### [ ] 6/4/19
 ---
