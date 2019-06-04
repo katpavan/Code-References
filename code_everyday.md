@@ -129,29 +129,40 @@
 
 * wordSubsets [#916](https://leetcode.com/problems/word-subsets/submissions/) : **Completed**
     * Useful code blocks 
-    ```javascript
-    // COUNT LETTERS OF A STRING
-    const maxLetterCountOfStr = (arr)=>{
-        const letterCount = new Array(26).fill(0); // each index represents the lowercase letters
-        for(let i in arr){
-            const a = "a".charCodeAt()
-            let curr = arr[i].charCodeAt()
-            letterCount[curr-a]++;
+        ```javascript
+        // COUNT LETTERS OF A STRING
+        const maxLetterCountOfStr = (arr)=>{
+            const letterCount = new Array(26).fill(0); // each index represents the lowercase letters
+            for(let i in arr){
+                const a = "a".charCodeAt()
+                let curr = arr[i].charCodeAt()
+                letterCount[curr-a]++;
+            }
+            return letterCount
         }
-        return letterCount
-    }
 
-    // COUNT MAX OCCURRENCE OF LETTERS OF A SET OF STRINGS
+        // COUNT MAX OCCURRENCE OF LETTERS OF A SET OF STRINGS
 
-    const maxLetterCountOfSubset = (arr)=>{
-    let result = new Array(26).fill(0);
-    for(let i in arr){
-        let letterCountOfStr = maxLetterCountOfStr(arr[i]);
-        result = result.map((letter, i) => Math.max(letter, letterCountOfStr[i]));
-    }
-    return result;
-    ```
+        const maxLetterCountOfSubset = (arr)=>{
+        let result = new Array(26).fill(0);
+        for(let i in arr){
+            let letterCountOfStr = maxLetterCountOfStr(arr[i]);
+            result = result.map((letter, i) => Math.max(letter, letterCountOfStr[i]));
+        }
+        return result;
+        ```
     * This problem was very difficult as the input from Leetcode was had many repeating values.  First failure was due to timeout.  The algorithm would perform duplicate iterations.  This is not optimal but much better than before
+
+    * When using map, make sure to initialze the results to a variable.
+        ```javascript
+        let x = [1,2,3,4,5];
+
+        x.map(()=>9);
+        // x = [1,2,3,4,5]
+
+        x = x.map(()=>9);
+        // x = [9,9,9,9,9]
+        ```
 ---
 ### [ ] 6/4/19
 ---
