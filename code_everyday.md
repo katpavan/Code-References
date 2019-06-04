@@ -178,7 +178,7 @@
 
 #### I honestly dont really understand this article at all.  Read later?
 ---
-### [ ] 6/4/19
+### [X] 6/4/19
 
 ### Intro to Computer Science (5-)
 
