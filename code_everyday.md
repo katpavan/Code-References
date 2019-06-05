@@ -237,7 +237,7 @@
         * Time: O(2n) ==> O(n)
         * Space: O(1)
         ```javascript
-        // RETURN THE FIRST DUCPLICATE OF A STR
+        // RETURN THE FIRST DUPLICATE OF A STR
         function firstNotRepeatingCharacter(s) {
             let charMap = {};
             for(let i in s){
