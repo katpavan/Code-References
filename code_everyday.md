@@ -211,7 +211,7 @@
 
 * Today though, I think I made good progress.  I scraped about 90% of all the Madewell products and about 2k of the Nordstorm.  There are still a few bugs in the in the front end such as pagination and responsiveness.  I'm still considering if I should implement user profiles so that the like button can have some functionality.  
 
-### Codesignal(3)
+### Codesignal(2.5)
 
 * firstDuplicate [link](https://app.codesignal.com/interview-practice/task/pMvymcahZ8dY4g75q) : **Completed**
     * This was a pretty basic problem.  I don't think there is a better way to do this than using a hashmap.
