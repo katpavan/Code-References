@@ -210,6 +210,23 @@
 * Today was pretty tough because I had held off on Garmet for a while.  There are many aspects of the projects that will be too difficult to complete by myself and work on job interviews at the same time.  I need to figure out how to scraped intermittently as well as scrape websites that have security measures again automated headless browsers.
 
 * Today though, I think I made good progress.  I scraped about 90% of all the Madewell products and about 2k of the Nordstorm.  There are still a few bugs in the in the front end such as pagination and responsiveness.  I'm still considering if I should implement user profiles so that the like button can have some functionality.  
+
+### Codesignal(1)
+
+* firstDuplicate [array](https://app.codesignal.com/interview-practice/task/pMvymcahZ8dY4g75q) : **Completed**
+    * This was a pretty basic problem.  I don't think there is a better way to do this than using a hashmap.
+        ```javascript
+        // COUNT LETTERS OF A STRING
+        function firstDuplicate(a) {
+            let numMap = {};
+            for(let i in a){
+                if(numMap[a[i]]) return a[i];
+                else numMap[a[i]] = 1;
+            }
+            return -1
+        }
+        ```
+
 ---
 ### [ ] 6/5/19
 ---
