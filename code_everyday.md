@@ -232,7 +232,7 @@
     * This one is actually of tricky.  Since the problem requires constant memory, I can't use a hashmap which is my first instinct.  So how do you keep track of multiple characters without creating a map?? 
         * Actually, this is not true.  Using an array or map to keep track of 26 letters is constant space.
 
-    * The solution I used was to use 2 for loops.  The first for loop will track the times each character appears in the str.  The second for loop will iterate through the original string and use each letter as the key for the map.  The first key that has a value of 1 is non-repeating.  T
+    * The solution I used was to use 2 for-loops.  The first for loop will track the times each character appears in the str.  The second for loop will iterate through the original string and use each letter as the key for the map.  The first key that has a value of 1 is non-repeating.  T
 
         * Time: O(2n) ==> O(n)
         * Space: O(1)
