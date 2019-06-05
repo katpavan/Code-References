@@ -180,7 +180,7 @@
 ---
 ### [X] 6/4/19
 
-### Intro to Computer Science (5-)
+### Intro to Computer Science (5-7)
 
 * 1.5 Programming Languages
   * **Programming Languages:**  notations for expressing computations in an exact and unabigious way.
