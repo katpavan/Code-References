@@ -213,10 +213,10 @@
 
 ### Codesignal(1)
 
-* firstDuplicate [array](https://app.codesignal.com/interview-practice/task/pMvymcahZ8dY4g75q) : **Completed**
+* firstDuplicate [link](https://app.codesignal.com/interview-practice/task/pMvymcahZ8dY4g75q) : **Completed**
     * This was a pretty basic problem.  I don't think there is a better way to do this than using a hashmap.
         ```javascript
-        // COUNT LETTERS OF A STRING
+        // RETURN THE FIRST DUPLICATE OF AN ARRAY
         function firstDuplicate(a) {
             let numMap = {};
             for(let i in a){
@@ -224,6 +224,29 @@
                 else numMap[a[i]] = 1;
             }
             return -1
+        }
+        ```
+
+* firstNonRepeatingChar [link](https://app.codesignal.com/interview-practice/task/uX5iLwhc6L5ckSyNC) : **Completed**
+    * This one is actually of tricky.  Since the problem requires constant memory, I can't use a hashmap which is my first instinct.  So how do you keep track of multiple characters without creating a map?? 
+        * Actually, this is not true.  Using an array or map to keep track of 26 letters is constant space.
+
+    * The solution I used was to use 2 for loops.  The first for loop will track the times each character appears in the str.  The second for loop will iterate through the original string and use each letter as the key for the map.  The first key that has a value of 1 is non-repeating.  T
+
+        * Time: O(2n) ==> O(n)
+        * Space: O(1)
+        ```javascript
+        // RETURN THE FIRST DUCPLICATE OF A STR
+        function firstNotRepeatingCharacter(s) {
+            let charMap = {};
+            for(let i in s){
+                charMap[s[i]] = (charMap[s[i]] || 0) + 1;
+            };
+            
+            for(let i in s){
+                if(charMap[s[i]] == 1) return s[i];
+            }
+            return '_'
         }
         ```
 
