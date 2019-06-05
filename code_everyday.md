@@ -215,6 +215,7 @@
 
 * firstDuplicate [link](https://app.codesignal.com/interview-practice/task/pMvymcahZ8dY4g75q) : **Completed**
     * This was a pretty basic problem.  I don't think there is a better way to do this than using a hashmap.
+        * So there is a _better_ [solution](https://leetcode.com/problems/find-the-duplicate-number/discuss/72846/My-easy-understood-solution-with-O(n)-time-and-O(1)-space-without-modifying-the-array.-With-clear-explanation.) using a fast and slow pointer but I think it's harder to understand which doesn't really make it a better solution.
         ```javascript
         // RETURN THE FIRST DUPLICATE OF AN ARRAY
         function firstDuplicate(a) {
