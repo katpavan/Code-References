@@ -211,7 +211,7 @@
 
 * Today though, I think I made good progress.  I scraped about 90% of all the Madewell products and about 2k of the Nordstorm.  There are still a few bugs in the in the front end such as pagination and responsiveness.  I'm still considering if I should implement user profiles so that the like button can have some functionality.  
 
-### Codesignal(1)
+### Codesignal(3)
 
 * firstDuplicate [link](https://app.codesignal.com/interview-practice/task/pMvymcahZ8dY4g75q) : **Completed**
     * This was a pretty basic problem.  I don't think there is a better way to do this than using a hashmap.
@@ -248,6 +248,22 @@
                 if(charMap[s[i]] == 1) return s[i];
             }
             return '_'
+        }
+        ```
+* rotateImage [link](https://app.codesignal.com/interview-practice/task/5A8jwLGcEpTPyyjTB) : **Attempted**
+    * I had done this one on paper before when reading through cracking the coding interview.  The trick is to realize that it is very similar to reversing a string.  You need a temp variable for each iteration and switch values on each layer of the matrix.
+        * This isn't the solution but its a first draft.  I'll finish this up at another time.
+        ```javascript
+        function rotateImage(a) {
+            let l = a.length-1
+            for(let i = 0; i < l; i++){
+                let temp = a[0][i];
+                a[l-i][0] = a[0][i];
+                a[l][l-i] = a[l-i][0];
+                a[i][l] = a[l][l-i];
+                temp = a[i][l];
+            }
+            return a
         }
         ```
 
