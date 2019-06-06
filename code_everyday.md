@@ -317,35 +317,36 @@
   * Target is the element that you clicked on and currentTarget is the element that the event listener was actually attached to.
  
 **Explain the difference between the usage of**
-    ``` javascript
-    function foo(){
-      // i am known as a definition of a statement
-    }
-    
-    var foo = function(){
-      // i am known as an expression
-      // i resolve to a value, even it just 'undefined'
-    }
+    ```javascript
+      function foo(){
+        // i am known as a definition of a statement
+      }
+
+      var foo = function(){
+        // i am known as an expression
+        // i resolve to a value, even it just 'undefined'
+      }
     ```
-    * Functions as expressions vs. definitions
-    * MDN - An expression is any valid unit of code that resolves to a value.
-    * Definitions cannot be used as an IIFE. Unles....(see 5)
+    
+  * Functions as expressions vs. definitions
+  * MDN - An expression is any valid unit of code that resolves to a value.
+  * Definitions cannot be used as an IIFE. Unles....(see 5)
   
-* **Explain why the following doesn't work as an IIFE"
+ **Explain why the following doesn't work as an IIFE"**
     ```javascript
       function foo(){
         // i puty this code
       }();
-      
       // SyntaxError: expected expression, got')'
     ```
-    **IIFE:** Immediately invoked function expression
+    
+**IIFE:** Immediately invoked function expression
       *Wrapping a function **definition** in `()` will convert it into an **expression**.  It can then be used as an IIFE
       ```javascript
       (function foo(){  }());
       ```
 
-**Why use IIFE ever?"
+**Why use IIFE ever?"**
   * To control variable scope
   
 **Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?**
