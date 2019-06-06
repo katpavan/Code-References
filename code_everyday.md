@@ -313,10 +313,11 @@
   * Inverse of event delegation.  Also known as **propogation**, events on an element will _bunnble up_ and also fire on all parents.
   * Events on an element will bubble up on the parents.
  
-**Difference Between "Target" and "CurrentTarget"
+**Difference Between "Target" and "CurrentTarget"**
   * Target is the element that you clicked on and currentTarget is the element that the event listener was actually attached to.
  
 **Explain the difference between the usage of**
+
     ```javascript
       function foo(){
         // i am known as a definition of a statement
@@ -333,6 +334,7 @@
   * Definitions cannot be used as an IIFE. Unles....(see 5)
   
  **Explain why the following doesn't work as an IIFE"**
+ 
     ```javascript
       function foo(){
         // i puty this code
@@ -342,6 +344,7 @@
     
 **IIFE:** Immediately invoked function expression
       *Wrapping a function **definition** in `()` will convert it into an **expression**.  It can then be used as an IIFE
+      
       ```javascript
       (function foo(){  }());
       ```
@@ -357,6 +360,39 @@
 **Explain hoisting**
   * all variables (var) are declared at the top of a given function scope whether you like it or not (includes function declarations)
 
+    ```javascript
+    function hoist(track){
+      if(track === 'Stir Fry'){
+        var action = 'dance';
+      }
+      
+      else {
+        var action = 'skip';
+      }
+      
+      return action;
+    }
+    //error: 'action' is already defined.
+    ```
+  * This is what javascript actually does with the `action` declaration.
+  
+    ```javascript
+    function hoist(track){
+        var action
+      if(track === 'Stir Fry'){
+        action = 'dance';
+      }
+      
+      else {
+        var action = 'skip';
+      }
+      
+      return action;
+    }
+    ```
+  * Javascript _hoists_ the variable declaration to the top of the file.
+  * `var` variables and functions are both hoisted.  
+  * ES6's `const` and `let` solve this problem since they are function and block scoped.
 ---
 ## [ ] 6/7/19
 ---
