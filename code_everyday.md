@@ -297,7 +297,27 @@
 
 
 ---
-## [ ] 6/6/19
+## [X] 6/6/19
+
+### Fizz Buzkill - [Answering Tricky JS Interview Questions](https://www.youtube.com/watch?v=cMxI8n393ZM) (Russel Anderson)
+
+#### Summary
+* Lot of times interviewers ask questions that are very tricky and kind of pointless.  But it's still important to be able to answer these question easily.
+
+1. **Explain Event Delegation**
+  - If you attach an event listener to the DOM element, that listener is not only firing on that DOM element, but also on _every_ child of that DOM element.
+  - You are bascially adding event listeners to all the children of that element.
+  - Example - If you have an <ul><li><a>, if you add an event listener to the <ul>, you are also adding the event listener to the <li> and <a>.  Clicking on the children will also trigger the event.
+  
+2. **Describe Event Bubbling**
+  - Inverse of event delegation.  Also known as **propogation**, events on an element will _bunnble up_ and also fire on all parents.
+  - Events on an element will bubble up on the parents.
+ 
+3. **Difference Between "Target" and "CurrentTarget"
+  - Target is the element that you clicked on and currentTarget is the element that the event listener was actually attached to.
+  
+4. 
+
 ---
 ## [ ] 6/7/19
 ---
