@@ -275,7 +275,14 @@
 #### Summary: 
 * Vincent invited me to a React meetup hosted by Sonder.  Two speakers talked about the some projects done at Sonder and React/React Native Hooks.
 
-* I met Khoi Tran (Engineer), David Hall (Software Engineer) and Sarah Davis (Junior Interior Designer).  They were all extremely nice and friendly.  David asked me about 
+#### Network:
+* I met Khoi Tran (Engineer), David Hall (Software Engineer) and Sarah Davis (Junior Interior Designer).  They were all extremely nice and friendly.  
+
+    * David asked me about soccer and if I was interested to play.  He was a Forensic Strucutral Engineer and took a bootcamp to become a Software Engineer.  He is going to host a workshop that helps applicants present themselves in a way that implicitly communicates competency.
+
+    * Sarah was an architect from St. Louis.  She recently moved to San Francisco and bikes to work.
+
+    * Khoi is Vincent's friend at Sonder.  His dad's name is Khoa and my dad's name is Khoi.  He explained to me his role at the company.  His team is the second phase of the 'assembly line' process.  They _onboard_ the property by figuring out what inventory items are available and applicable to this property.  He works with the local inventory team to make sure that the Sonder is properly furnished.
 
 
 ---
