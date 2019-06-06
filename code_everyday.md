@@ -269,6 +269,15 @@
 
 ---
 ### [ ] 6/5/19
+
+## Sonder React [Meetup](https://www.eventbrite.com/e/reactiflux-meetup-at-sonder-hq-tickets-62177958949#)
+
+#### Summary: 
+* Vincent invited me to a React meetup hosted by Sonder.  Two speakers talked about the some projects done at Sonder and React/React Native Hooks.
+
+* I met Khoi Tran (Engineer), David Hall (Software Engineer) and Sarah Davis (Junior Interior Designer).  They were all extremely nice and friendly.  David asked me about 
+
+
 ---
 ### [ ] 6/6/19
 ---
