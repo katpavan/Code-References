@@ -304,19 +304,19 @@
 #### Summary
 * Lot of times interviewers ask questions that are very tricky and kind of pointless.  But it's still important to be able to answer these question easily.
 
-* **Explain Event Delegation**
+**Explain Event Delegation**
   * If you attach an event listener to the DOM element, that listener is not only firing on that DOM element, but also on _every_ child of that DOM element.
   * You are bascially adding event listeners to all the children of that element.
   * Example - If you have an <ul><li><a>, if you add an event listener to the <ul>, you are also adding the event listener to the <li> and <a>.  Clicking on the children will also trigger the event.
 
-* **Describe Event Bubbling**
+**Describe Event Bubbling**
   * Inverse of event delegation.  Also known as **propogation**, events on an element will _bunnble up_ and also fire on all parents.
   * Events on an element will bubble up on the parents.
  
- * **Difference Between "Target" and "CurrentTarget"
+**Difference Between "Target" and "CurrentTarget"
   * Target is the element that you clicked on and currentTarget is the element that the event listener was actually attached to.
  
-* **Explain the difference between the usage of
+**Explain the difference between the usage of
     ``` javascript
     function foo(){
       // i am known as a definition of a statement
@@ -339,21 +339,21 @@
       
       // SyntaxError: expected expression, got')'
     ```
-    * **IIFE:** Immediately invoked function expression
-    * Wrapping a function **definition** in `()` will convert it into an **expression**.  It can then be used as an IIFE
+    **IIFE:** Immediately invoked function expression
+      *Wrapping a function **definition** in `()` will convert it into an **expression**.  It can then be used as an IIFE
       ```javascript
       (function foo(){  }());
       ```
 
-* **Why use IIFE ever?"
+**Why use IIFE ever?"
   * To control variable scope
   
-* **Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?**
+**Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?**
   * You can'y predict the future.
   * Reduce collision
   * maintain independence
 
-* **Explain hoisting**
+**Explain hoisting**
   * all variables (var) are declared at the top of a given function scope whether you like it or not (includes function declarations)
 
 ---
