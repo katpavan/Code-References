@@ -304,19 +304,19 @@
 #### Summary
 * Lot of times interviewers ask questions that are very tricky and kind of pointless.  But it's still important to be able to answer these question easily.
 
-1. **Explain Event Delegation**
-  - If you attach an event listener to the DOM element, that listener is not only firing on that DOM element, but also on _every_ child of that DOM element.
-  - You are bascially adding event listeners to all the children of that element.
-  - Example - If you have an <ul><li><a>, if you add an event listener to the <ul>, you are also adding the event listener to the <li> and <a>.  Clicking on the children will also trigger the event.
+* **Explain Event Delegation**
+  * If you attach an event listener to the DOM element, that listener is not only firing on that DOM element, but also on _every_ child of that DOM element.
+  * You are bascially adding event listeners to all the children of that element.
+  * Example - If you have an <ul><li><a>, if you add an event listener to the <ul>, you are also adding the event listener to the <li> and <a>.  Clicking on the children will also trigger the event.
   
-2. **Describe Event Bubbling**
-  - Inverse of event delegation.  Also known as **propogation**, events on an element will _bunnble up_ and also fire on all parents.
-  - Events on an element will bubble up on the parents.
+* **Describe Event Bubbling**
+  * Inverse of event delegation.  Also known as **propogation**, events on an element will _bunnble up_ and also fire on all parents.
+  * Events on an element will bubble up on the parents.
  
-3. **Difference Between "Target" and "CurrentTarget"
-  - Target is the element that you clicked on and currentTarget is the element that the event listener was actually attached to.
+ * **Difference Between "Target" and "CurrentTarget"
+  * Target is the element that you clicked on and currentTarget is the element that the event listener was actually attached to.
  
-4. **Explain the difference between the usage of
+* **Explain the difference between the usage of
     ``` javascript
     function foo(){
       // i am known as a definition of a statement
@@ -327,11 +327,11 @@
       // i resolve to a value, even it just 'undefined'
     }
     ```
-  - Functions as expressions vs. definitions
-  - MDN - An expression is any valid unit of code that resolves to a value.
-  - Definitions cannot be used as an IIFE. Unles....(see 5)
+    * Functions as expressions vs. definitions
+    * MDN - An expression is any valid unit of code that resolves to a value.
+    * Definitions cannot be used as an IIFE. Unles....(see 5)
   
-5.  **Explain why the following doesn't work as an IIFE"
+* **Explain why the following doesn't work as an IIFE"
     ```javascript
       function foo(){
         // i puty this code
@@ -339,22 +339,22 @@
       
       // SyntaxError: expected expression, got')'
     ```
-  - **IIFE:** Immediately invoked function expression
-  - Wrapping a function **definition** in `()` will convert it into an **expression**.  It can then be used as an IIFE
+    * **IIFE:** Immediately invoked function expression
+    * Wrapping a function **definition** in `()` will convert it into an **expression**.  It can then be used as an IIFE
       ```javascript
       (function foo(){  }());
       ```
 
-6.  **Why use IIFE ever?"
-  - To control variable scope
+* **Why use IIFE ever?"
+  * To control variable scope
   
-7. **Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?**
-  - You can'y predict the future.
-  - Reduce collision
-  - maintain independence
+* **Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?**
+  * You can'y predict the future.
+  * Reduce collision
+  * maintain independence
 
-8. **Explain hoisting**
-  - all variables (var) are declared at the top of a given function scope whether you like it or not (includes function declarations)
+* **Explain hoisting**
+  * all variables (var) are declared at the top of a given function scope whether you like it or not (includes function declarations)
 
 ---
 ## [ ] 6/7/19
