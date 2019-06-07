@@ -437,10 +437,41 @@ function foo(){
         }
         ```
 
-
-
 ---
 ## [ ] 6/7/19
+
+### Codesignal(1)
+
+* rotateImage [link](https://app.codesignal.com/interview-practice/task/5A8jwLGcEpTPyyjTB) : **Completed**
+    * Going back through the solution slowly, everything makes sense now.  There are a couple of key points that I missed with my first draft.
+
+        ```javascript
+        function rotateImage(a) {
+            const n = a.length;
+            for(let layer = 0; layer < n/2; layer++){
+                let first = layer;
+                let last = n - 1 - layer; //this line was pretty much what I wrote the first time.  Instead of using a second variable called 'l = L-1', the solution just grouped it into the last variable.
+                
+                //the last variable also better explains where the loop should end on each layer.  naming the for loops with 'i' and 'j' is not very clear.
+                
+                for(let i = first; i < last; i++){
+                    let offset = i - first; 
+                    //this offset is probably the most important part of the formula.  Before, I used last-i.  This made sense at first but 'i' is constantly getting larger with each subsequent 'layer' iteration.  This means that I would be skipping values with 'last-i'.  
+                    //With an 'offset', the values always starts at 0 because 'i' and 'first' starts out the same on every iteration of the second loop.  This means that we are always counting back correctly from 'last'
+                   
+                    let temp = a[first][i];
+                    
+                    //this section is a bit tricky.  There is no real shortcut to writing this down.  Go slowly over each column and row and make sure that there is an index to account for the first loop and the second.  Also note the direction of each iteration from every face of the matrix.  If counting right to left, its 'last-offset'.  Top to down is just 'i' and left to right is also just 'i'.
+                    a[first][i] = a[last-offset][first];
+                    a[last-offset][first] = a[last][last-offset];
+                    a[last][last-offset] = a[i][last];
+                    a[i][last] = temp;
+                }
+            }
+            return a
+        }
+        ```
+* All in all, this was a much more challenging problem than I had initally thought.  Definitely need to go back and review this a couple of times before it becomes second nature.  I won't have the luxury of time on an interview.  It's either know the answer right away or not. 
 ---
 ## [ ] 6/8/19
 ---
