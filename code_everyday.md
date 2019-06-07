@@ -318,16 +318,16 @@
  
 **Explain the difference between the usage of**
 
-    ```javascript
-      function foo(){
-        // i am known as a definition of a statement
-      }
+```javascript
+function foo(){
+// i am known as a definition of a statement
+}
 
-      var foo = function(){
-        // i am known as an expression
-        // i resolve to a value, even it just 'undefined'
-      }
-    ```
+var foo = function(){
+// i am known as an expression
+// i resolve to a value, even it just 'undefined'
+}
+```
     
   * Functions as expressions vs. definitions
   * MDN - An expression is any valid unit of code that resolves to a value.
@@ -335,19 +335,19 @@
   
  **Explain why the following doesn't work as an IIFE"**
  
-    ```javascript
-      function foo(){
-        // i puty this code
-      }();
-      // SyntaxError: expected expression, got')'
-    ```
+```javascript
+function foo(){
+    // i puty this code
+}();
+   // SyntaxError: expected expression, got')'
+```
     
 **IIFE:** Immediately invoked function expression
       *Wrapping a function **definition** in `()` will convert it into an **expression**.  It can then be used as an IIFE
       
-      ```javascript
-      (function foo(){  }());
-      ```
+```javascript
+(function foo(){  }());
+```
 
 **Why use IIFE ever?"**
   * To control variable scope
@@ -415,6 +415,28 @@
             return a
         }
         ```
+    * So the formula breaks down when you get into the subsequent layers.  I had to resort to the book for the answer so this one is kind of a failure.  Definitely need to go back and understand the solution.  Here it is though:
+
+        ```javascript
+        function rotateImage(a) {
+            const n = a.length;
+            for(let layer = 0; layer < n/2; layer++){
+                let first = layer;
+                let last = n - 1 - layer;
+                for(let i = first; i < last; i++){
+                    let offset = i - first;
+                    let top = a[first][i];
+                    
+                    a[first][i] = a[last-offset][first];
+                    a[last-offset][first] = a[last][last-offset];
+                    a[last][last-offset] = a[i][last];
+                    a[i][last] = top;
+                }
+            }
+            return a
+        }
+        ```
+
 
 
 ---
