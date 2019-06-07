@@ -393,6 +393,30 @@
   * Javascript _hoists_ the variable declaration to the top of the file.
   * `var` variables and functions are both hoisted.  
   * ES6's `const` and `let` solve this problem since they are function and block scoped.
+
+### Codesignal(1)
+
+* rotateImage [link](https://app.codesignal.com/interview-practice/task/5A8jwLGcEpTPyyjTB) : **Attempted**
+    * I had able to figure out the order of which matrix gets moved where but it still doesn't seem to work.  I've passed the first two cases but stuck on the 5x5 and beyond
+        ```javascript
+        function rotateImage(a) {
+            const L = a.length;
+            const l = L-1;
+            for(let i = 0; i < Math.floor(L/2); i++){
+                for(let j = i; j < l-i; j++){
+                    let temp = a[j][l]
+                    a[j][l] = a[i][j];
+                    a[i][j] = a[l-j][i]
+                    a[l-j][i] = a[l][l-j];
+                    a[l][l-j] = temp;
+                    console.log(i,j,l)
+                }
+            }
+            return a
+        }
+        ```
+
+
 ---
 ## [ ] 6/7/19
 ---
