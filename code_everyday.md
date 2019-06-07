@@ -472,6 +472,20 @@ function foo(){
         }
         ```
 * All in all, this was a much more challenging problem than I had initally thought.  Definitely need to go back and review this a couple of times before it becomes second nature.  I won't have the luxury of time on an interview.  It's either know the answer right away or not. 
+
+### Redis
+
+* What is [Redis?](https://redis.io/topics/faq)
+  * Redis is a key-value store. It is an **in-memory but persistent on disk database.** 
+  * It represents a different trade off where very high write and read speed is achieved with the limitation of **data sets that can't be larger than memory.**
+  * Another advantage of in memory databases is that the memory representation of complex data structure is much simpler to manipulate compared to the same data structures on disk.
+    * Redis can do a lot, with little internal complexity
+
+* What's the Redis memory footprint?
+  * An empty intance uses ~ 3MB of memory
+  * 1 Million small Keys -> String Value pairs use ~ 85MB of memory
+  * 1 Million Keys -> Hash value, presenting an object with 5 fields use ~ 160MB of memory.
+  
 ---
 ## [ ] 6/8/19
 ---
