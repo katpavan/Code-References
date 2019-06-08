@@ -11,6 +11,11 @@
 
 # May
 * [x] [6/2/19](./code_everyday_files/2019/June/6-2-19.md)
+    - Leetcode(2)
+        - isSelfDivisible - Completed
+        - wordSubsets - Completed
+    - Intro to Computer Science(1-5)
+        - Summary on sections 1.1-1.4
 * [x] [6/3/19](./code_everyday_files/2019/June/6-3-19.md)
 * [x] [6/4/19](./code_everyday_files/2019/June/6-4-19.md)
 * [x] [6/5/19](./code_everyday_files/2019/June/6-5-19.md)
