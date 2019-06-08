@@ -47,53 +47,29 @@
     - Redis
         - defition and short summary
 
----
-## [ ] 6/8/19
----
-## [ ] 6/9/19
----
-## [ ] 6/10/19
----
-## [ ] 6/11/19
----
-## [ ] 6/12/19
----
-## [ ] 6/13/19
----
-## [ ] 6/14/19
----
-## [ ] 6/15/19
----
-## [ ] 6/16/19
----
-## [ ] 6/17/19
----
-## [ ] 6/18/19
----
-## [ ] 6/19/19
----
-## [ ] 6/20/19
----
-## [ ] 6/21/19
----
-## [ ] 6/22/19
----
-## [ ] 6/23/19
----
-## [ ] 6/24/19
----
-## [ ] 6/25/19
----
-## [ ] 6/26/19
----
-## [ ] 6/27/19
----
-## [ ] 6/28/19
----
-## [ ] 6/29/19
----
-## [ ] 6/30/19
----
+* [x] [6/8/19](./code_everyday_files/2019/June/6-7-19.md)
+* [x] [6/9/19](./code_everyday_files/2019/June/6-7-19.md)
+* [x] [6/10/19](./code_everyday_files/2019/June/6-7-19.md)
+* [x] [6/11/19](./code_everyday_files/2019/June/6-7-19.md)
+* [x] [6/12/19](./code_everyday_files/2019/June/6-7-19.md)
+* [x] [6/13/19](./code_everyday_files/2019/June/6-7-19.md)
+* [x] [6/14/19](./code_everyday_files/2019/June/6-7-19.md)
+* [x] [6/15/19](./code_everyday_files/2019/June/6-7-19.md)
+* [x] [6/16/19](./code_everyday_files/2019/June/6-7-19.md)
+* [x] [6/17/19](./code_everyday_files/2019/June/6-7-19.md)
+* [x] [6/18/19](./code_everyday_files/2019/June/6-7-19.md)
+* [x] [6/19/19](./code_everyday_files/2019/June/6-7-19.md)
+* [x] [6/20/19](./code_everyday_files/2019/June/6-7-19.md)
+* [x] [6/21/19](./code_everyday_files/2019/June/6-7-19.md)
+* [x] [6/22/19](./code_everyday_files/2019/June/6-7-19.md)
+* [x] [6/23/19](./code_everyday_files/2019/June/6-7-19.md)
+* [x] [6/24/19](./code_everyday_files/2019/June/6-7-19.md)
+* [x] [6/25/19](./code_everyday_files/2019/June/6-7-19.md)
+* [x] [6/26/19](./code_everyday_files/2019/June/6-7-19.md)
+* [x] [6/27/19](./code_everyday_files/2019/June/6-7-19.md)
+* [x] [6/28/19](./code_everyday_files/2019/June/6-7-19.md)
+* [x] [6/29/19](./code_everyday_files/2019/June/6-7-19.md)
+* [x] [6/30/19](./code_everyday_files/2019/June/6-7-19.md)
 
 
 
