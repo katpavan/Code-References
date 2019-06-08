@@ -16,8 +16,21 @@
         - wordSubsets - Completed
     - Intro to Computer Science(1-5)
         - Summary on sections 1.1-1.4
+
 * [x] [6/3/19](./code_everyday_files/2019/June/6-3-19.md)
+    - DotJS(1)
+        - Revisiting node_modules
+    - Leetcode(1)
+        - wordSubsets
+    - Pythong vs Java
+
 * [x] [6/4/19](./code_everyday_files/2019/June/6-4-19.md)
+    - Intro to Computer Science(5-7)
+        - Summary on remainder of chapter1
+    - Codesignal(2.5)
+        - firstDuplicate - Completed
+        - firstNonRepeatingChar - Completed
+        - rotateImage - Attempted
 * [x] [6/5/19](./code_everyday_files/2019/June/6-5-19.md)
 * [x] [6/6/19](./code_everyday_files/2019/June/6-6-19.md)
 * [x] [6/7/19](./code_everyday_files/2019/June/6-7-19.md)
