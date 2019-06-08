@@ -45,7 +45,7 @@
     - Codesignal(1)
         - rotateImage - Completed
     - Redis
-        - defition and short summary
+        - definition and short summary
 
 * [x] [6/8/19](./code_everyday_files/2019/June/6-7-19.md)
 * [x] [6/9/19](./code_everyday_files/2019/June/6-7-19.md)
