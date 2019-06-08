@@ -11,124 +11,13 @@
 
 # May
 [x] [6/2/19](./code_everyday_files/2019/June/6-2-19.md)
+
 [x] [6/3/19](./code_everyday_files/2019/June/6-3-19.md)
 
-### [X] 6/4/19
+[x] [6/4/19](./code_everyday_files/2019/June/6-4-19.md)
 
-### Intro to Computer Science (5-7)
+[x] [6/5/19](./code_everyday_files/2019/June/6-5-19.md)
 
-* 1.5 Programming Languages
-  * **Programming Languages:**  notations for expressing computations in an exact and unabigious way.
-  * **Compiling/Interpreted:** translating a high-level language into the machine language that the computer can execute
-  * **Compiler:** a complex computer program that takes another program written in a high-evel language and transltates it into an equivalent program in the machine language of the computer. The high-level program is called the _source code_ and the machine langauge is called the _machine code_.
-
-    ![pic](./img/intro-to-cs/01.png)
-
-  * **Interpreter:** a program that simulates a computer that understands a high-level language.
-
-    ![pic](./img/intro-to-cs/02.png)
-
-  * **Compiling vs Interpreting:**
-    * compiling is a one-shot translation.  Once a program is compiled, it may be run over and over again without further need for the compiler or the source code.
-    * interpreting requires the interpreter and the source everytime for the program to run.
-    * compiled languages tend to be faster, since the translation is done once and for all.  interpreted languages lend themselves to a more flexible programming environment.
-
-## Garmet
-
-#### Update: 
-* Need to scrape the entirety of Nordstrom and Madewell to deploy useable product.
-* Need to fix parsing logic so that all prices are integers
-* Update filter to have use multiple fields
-* Find a way to intermittently scrape while deployed
-
-#### Thoughts: 
-* Today was pretty tough because I had held off on Garmet for a while.  There are many aspects of the projects that will be too difficult to complete by myself and work on job interviews at the same time.  I need to figure out how to scraped intermittently as well as scrape websites that have security measures again automated headless browsers.
-
-* Today though, I think I made good progress.  I scraped about 90% of all the Madewell products and about 2k of the Nordstorm.  There are still a few bugs in the in the front end such as pagination and responsiveness.  I'm still considering if I should implement user profiles so that the like button can have some functionality.  
-
-### Codesignal(2.5)
-
-* firstDuplicate [link](https://app.codesignal.com/interview-practice/task/pMvymcahZ8dY4g75q) : **Completed**
-    * This was a pretty basic problem.  I don't think there is a better way to do this than using a hashmap.
-        * So there is a _better_ [solution](https://leetcode.com/problems/find-the-duplicate-number/discuss/72846/My-easy-understood-solution-with-O(n)-time-and-O(1)-space-without-modifying-the-array.-With-clear-explanation.) using a fast and slow pointer but I think it's harder to understand which doesn't really make it a better solution.
-        ```javascript
-        // RETURN THE FIRST DUPLICATE OF AN ARRAY
-        function firstDuplicate(a) {
-            let numMap = {};
-            for(let i in a){
-                if(numMap[a[i]]) return a[i];
-                else numMap[a[i]] = 1;
-            }
-            return -1
-        }
-        ```
-
-* firstNonRepeatingChar [link](https://app.codesignal.com/interview-practice/task/uX5iLwhc6L5ckSyNC) : **Completed**
-    * This one is actually of tricky.  Since the problem requires constant memory, I can't use a hashmap which is my first instinct.  So how do you keep track of multiple characters without creating a map?? 
-        * Actually, this is not true.  Using an array or map to keep track of 26 letters is constant space.
-
-    * The solution I used was to use 2 for-loops.  The first for loop will track the times each character appears in the str.  The second for loop will iterate through the original string and use each letter as the key for the map.  The first key that has a value of 1 is non-repeating.  T
-
-        * Time: O(2n) ==> O(n)
-        * Space: O(1)
-        ```javascript
-        // RETURN THE FIRST DUPLICATE OF A STR
-        function firstNotRepeatingCharacter(s) {
-            let charMap = {};
-            for(let i in s){
-                charMap[s[i]] = (charMap[s[i]] || 0) + 1;
-            };
-            
-            for(let i in s){
-                if(charMap[s[i]] == 1) return s[i];
-            }
-            return '_'
-        }
-        ```
-* rotateImage [link](https://app.codesignal.com/interview-practice/task/5A8jwLGcEpTPyyjTB) : **Attempted**
-    * I had done this one on paper before when reading through cracking the coding interview.  The trick is to realize that it is very similar to reversing a string.  You need a temp variable for each iteration and switch values on each layer of the matrix.
-        * This isn't the solution but its a first draft.  I'll finish this up at another time.
-        ```javascript
-        function rotateImage(a) {
-            let l = a.length-1
-            for(let i = 0; i < l; i++){
-                let temp = a[0][i];
-                a[l-i][0] = a[0][i];
-                a[l][l-i] = a[l-i][0];
-                a[i][l] = a[l][l-i];
-                temp = a[i][l];
-            }
-            return a
-        }
-        ```
-
----
-## [X] 6/5/19
-
-### Sonder React [Meetup](https://www.eventbrite.com/e/reactiflux-meetup-at-sonder-hq-tickets-62177958949#)
-
-#### Summary: 
-* Vincent invited me to a React meetup hosted by Sonder.  Two speakers talked about the some projects done at Sonder and React/React Native Hooks.
-
-    * The first presenter talked about why Sonder chose React Native was the right choice for the mobile application.  
-        * Pros:
-            - Writing in React Native means that it will easily be used for both IOS and Android.
-            - Javascript changes can bypass the uploading to the app stores.
-        * Cons:
-            - React uses lots of packages and runs into the problem of _dependecy hell_
-            - The package is a lot larger than native software like swift. The example he showed was larger by 8 times.
-            - Not all the React Native code is translated well to both IOS and Android.
-    
-    * The second presenter talked about React Hooks which was very confusing.  I didn't really understand so I will need to do some more reading.
-
-#### Network:
-* I met Khoi Tran (Engineer), David Hall (Software Engineer) and Sarah Davis (Junior Interior Designer).  They were all extremely nice and friendly.  
-
-    * David asked me about soccer and if I was interested to play.  He was a Forensic Strucutral Engineer and took a bootcamp to become a Software Engineer.  He is going to host a workshop that helps applicants present themselves in a way that implicitly communicates competency.
-
-    * Sarah was an architect from St. Louis.  She recently moved to San Francisco and bikes to work.
-
-    * Khoi is Vincent's friend at Sonder.  His dad's name is Khoa and my dad's name is Khoi.  He explained to me his role at the company.  His team is the second phase of the 'assembly line' process.  They _on board_ the property by figuring out what inventory items are available and applicable to this property.  He works with the local inventory team to make sure that the Sonder is properly furnished.  I showed him Garmet and he asked me a couple questions.
 
 
 ---
