@@ -31,8 +31,16 @@
         - firstDuplicate - Completed
         - firstNonRepeatingChar - Completed
         - rotateImage - Attempted
+
 * [x] [6/5/19](./code_everyday_files/2019/June/6-5-19.md)
+    - Sonder React/React Native
+    
 * [x] [6/6/19](./code_everyday_files/2019/June/6-6-19.md)
+    - Fizz Buzzkill
+        - Tricky questions asked on interviews
+    - Codesignal(1)
+        - rotateImage - Completed
+
 * [x] [6/7/19](./code_everyday_files/2019/June/6-7-19.md)
     - Codesignal(1)
         - rotateImage - Completed
