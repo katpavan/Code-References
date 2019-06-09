@@ -49,8 +49,8 @@
 
 * [ ] [6/8/19](./code_everyday_files/2019/June/6-8-19.md)
     - Codesignal(1)
-        - groupingDishes - Attempted
-        
+        - groupingDishes - Completed
+
 * [ ] [6/9/19](./code_everyday_files/2019/June/6-7-19.md)
 * [ ] [6/10/19](./code_everyday_files/2019/June/6-7-19.md)
 * [ ] [6/11/19](./code_everyday_files/2019/June/6-7-19.md)
