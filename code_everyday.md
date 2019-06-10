@@ -51,7 +51,10 @@
     - Codesignal(1)
         - groupingDishes - Completed
 
-* [ ] [6/9/19](./code_everyday_files/2019/June/6-7-19.md)
+* [ ] [6/9/19](./code_everyday_files/2019/June/6-9-19.md)
+    - Designing Data-Intensive Applications
+        - Chapter 1
+
 * [ ] [6/10/19](./code_everyday_files/2019/June/6-7-19.md)
 * [ ] [6/11/19](./code_everyday_files/2019/June/6-7-19.md)
 * [ ] [6/12/19](./code_everyday_files/2019/June/6-7-19.md)
