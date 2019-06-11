@@ -1,0 +1,328 @@
+## ES6 Classes
+
+### Summary : With ES6, Javascript now has a class keyword that makes it very similar to how you might program in other OOP languages such as C#, Java, or PHP.  
+
+### Defining a Class
+
+ ```javascript
+ class Vehicle {
+ 
+ }
+ 
+ console.log(typeof Vehicle);
+ 
+ //function
+ ```
+ * Using the `class` keyword does not really give you access to an actual `class type` in Javascript.  It's bascially the ES5 constructo function with prettier syntax.
+ 
+### Instantiating an Object from ES6 Class
+
+```javascript
+class Vehicle{
+
+}
+let vehicle = new Vehicle();
+
+console.log(typeof vehicle); //object
+console.log(vehicle instanceof Vehicle); //true
+```
+* Even though the `class` itself is a function, when we instantiate an object from that class, we do get an actual object.
+
+### Creating an ES6 Method Inside a Class
+
+```javascript
+class Vehicle{
+ displayType(){
+  console.log('Car');
+ }
+}
+
+let vehicle = new Vehicle();
+vehicle.displayType(); //Car
+```
+* Simialar to declaring a function inside an object literal without the function keyword in ES6, you can also use this shorthand syntax when creating a method inside a class
+
+### Adding a method to a class = Adding a function to a Prototype
+
+```javascript
+class Vehicle{
+ displayType(){
+  console.log('Car');
+ }
+}
+
+let vehicle = new Vehicle();
+console.log(vehicle.displayType === Vehicle.prototype.displayType);
+
+//true
+```
+* Adding a method to a class is like adding a function to a prototype object.
+
+### ES6 Constructor Function
+
+```javascript
+class Vehicle{
+ constructor(){
+  console.log('Running automatically...')
+ }
+ 
+ displayType(){
+  console.log('Car');
+ }
+}
+
+let vehicle = new Vehicle();
+
+//Running automatically...
+```
+* **Constructors** are key concepts of classes in any object oriented language.  They are functions that _automatically run_ anytime an object is instantiated from that class
+* This is used to set up some default data or initialized needed variables.
+
+### Assigning a class to a Variable
+
+```javascript
+let someVar = class Vehicle{
+ constructor(){
+  console.log('Running automatically...')
+ }
+ 
+ displayType(){
+  console.log('Car')
+ }
+}
+
+new someVar();
+
+//Running automatically...
+```
+* Similar to assigning functions to variables.  You can assign classes to them as well.
+
+### Inheritance with extends and super in ES6
+```javascript
+class Vehicle{ 
+ constructor(){
+  console.log('Start me up');
+ }
+}
+
+class Tesla extends Vehicle{
+
+}
+
+let model3 = new Tesla();
+
+//Start me up
+```
+* Notice that the `Tesla` class is 100% empty, there is nothing between the curly braces
+* Even though its empty, it extends Vehicle with does have a constructor.  In ES6, the constructor gets called when the child class is instantiated.
+
+```javascript
+class Vehicle{
+ constructor(color){
+  console.log(`This cas is ${color}`)
+ }
+}
+
+class Tesla extends Vehicle{
+}
+
+let model3 = new Tesla('Blue');
+
+//The car is Blue
+```
+* Another example showing that the extends beings the base class constructor to the child class
+
+### Calling a Parent Constructor with super()
+* What happens if a parent has a constructor, and the child class also has a constructor? This is when `super()` comes in:
+```javascript
+class Vehicle{
+ constructor(){
+  console.log('The Base vehicle');
+ }
+}
+
+class Tesla extends Vehicle{
+ constructor(){
+  super();
+  console.log('The Tesla vehicle');
+ }
+}
+
+let model3 = new Tesla();
+
+//The Base vehicle
+//The Tesla vehicle
+```
+* By calling `super()` in the Tesla child class, the Javascript engine knows that it should instantiate the parent class of Vehicle and class it's constructor.  This is why you see both messages.
+* It is **require** that `super()` be called in the child constructor.  If you don't, there will be a `Derived constructor must be called super()` error.
+
+### ES6 Method Override
+* When you extend a class, all methods and properties get passed down to the child instance.  What about a situation where you want to apply a different behavior to a method that gets inherited?
+* Just redefined the method in the child class.
+```javascript
+class Vehicle{
+ getPropulsion(){
+  return 'Gas powered'
+ }
+}
+
+class Tesla extends Vehicle{
+ getPropulsion(){
+  return 'Electric Powered'
+ }
+}
+
+let model3 = new Tesla();
+let poweredBy = model3.getPropulsion();
+console.log(poweredBy)
+
+//Electric powered
+```
+* No special syntax is required to override the base class's method
+
+### Calling super() in a method
+```javascript
+class Vehicle{
+ getPropulsion(){
+  return 'Gas powered'
+ }
+}
+
+class Tesla extends Vehicle{
+ getPropulsion(){
+  return 'Hybrid is' + super.getPropulsion() + 'and Electric powered'
+ }
+}
+
+let model3 = new Tesla();
+
+let poweredBy = model3.getPropulsion();
+console.log(poweredBy);
+
+//Hybrid is Gas powered and Electric powered
+```
+* By calling `super.getPropulsion()`, the Javascript engine will look up the prototype chain for a `getPropulsion()` method and locate it in the vehicle class.
+
+### Properties of Class Instances
+```javascript
+class Vehicle{
+ constructor(){
+  this.kindOf = 'Car';
+ }
+}
+
+class Tesla extends Vehicle{
+ constructor(){
+  super();
+ }
+}
+
+let car = new Tesla();
+console.log(car.kindOf);
+
+//car
+```
+* We initialize values in the constructor using the `this` keyword as we did in ES5
+
+### Accessing `this` across constructors
+```javascript
+class Vehicle{
+ constructor(){
+  this.kindOf = 'Car'
+ }
+}
+
+class Tesla extends Vehicle{
+ constructor(){
+  super();
+  this.kindOf = 'Electric' + this.kindOf;
+ }
+}
+
+let car = new Tesla();
+console.log(car.kindOf);
+
+//Electric Car
+```
+* This is a way to mutate the value held in the base clas and brought over with `super()`.
+
+### Static Methods and Properties in ES6
+```javascript
+class Vehicle{
+ static getDefaultEngine(){
+  return 'Gas'
+ }
+}
+
+let engine = Vehicle.getDefaultEngine();
+console.log(engine)
+
+//Gas
+```
+* A **static method** can be called directly from the class without creating an instance of that class first.  
+
+### ES6 Getters and Setters
+```javascript
+ class Square{
+  constructor(width){
+   this.width = width;
+  }
+  
+  get height(){
+   return this.width;
+  }
+  
+  set height(height){
+   this.width = height;
+   console.log('Set a new height of:' + this.height;
+  }
+  
+  get area(){
+   return this.width*this.height;
+  }
+ }
+ 
+ let square = new Square(2);
+ console.log('Getting the height:' + square.height);
+ console.log('Getting the area:' + square.area);
+ 
+ square.height = 5;
+ console.log('Getting the height:' + square.height);
+ console.log('Getting the area:' + square.area);
+ 
+ square.height = 8;
+ console.log('Getting the height:' + square.height);
+ console.log('Getting the area:' + square.area);
+ 
+// Getting the height: 2
+// Getting the area: 4
+// Set a new height of: 5
+// Getting the height: 5
+// Getting the area: 25
+// Set a new height of: 8
+// Getting the height: 8
+// Getting the area: 64
+ 
+```
+* **Getters** and **Setters** are prefix keywords that allow methods with the same name to both be called and updated directly.
+
+### Classes as first class citizens
+* In ES6, classes are first class citizens.  In other words, they can be **passed around in your scripts just like you would pass variables, objects, and functions**
+```javascript
+class Vehicle{
+ constructor(){
+  console.log('moving forward')
+ }
+}
+
+function move(){
+ console.log('finished moving')
+}
+
+move(new Vehicle());
+
+//moving forward
+//finished moving
+```
+
+### Conclusion: ES6 `class` is just a new syntax that makes it easier to set up constructor functions and object prototypes.
