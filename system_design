@@ -1,0 +1,38 @@
+## Design for a System of Sensors and Alert When the State Changes
+
+### Step 1 - Understand the Goals
+  * Calrify ambiguities early
+  * What is the goal of the system?
+  * Who are the users of the system? What do they need it for? How are they going to use it?
+  * What are the inputs and outputs of the system?
+  
+### Step 2 - Establish the Scope
+  * Define all the features of the system
+  * Do we want to discuss the end-to-end or jus the API?
+  * What clients do we want to support (mobile, web, etc)?
+  * Do we require authentication? Analytics? Integrating with existing systems?
+  
+### Step 3 - Design for the Right Scale
+  * Knowing the scale means you know whether your data can fit on one machine or whether you need to scale the reads
+  * What is the expected read-to-write ratio?
+  * How many concurrent requests should be expect?
+  * What is the average expetec reponse time?
+  * What's the limit of the data we allow users to provide?
+
+### Step 4 - Start High-Level, then Drill-Down
+  * Cover end-to-end process based on establish goals.  This includes API, backend services, offline processes, data stores
+  * User Interaction
+  * External API calls
+  * Offline processes
+  
+### Step 5 - Data Structures and Algorithms
+  * URL Shortener - Hasihing Function
+  * Need it to scale - sharding
+  * Concurrency? Redundancy?
+  
+### Step 6 - Tradeoffs
+  * Almost every decision will involve a trade off.  Being able to describe them in real time shows that you understand that complex systems oftern require compromises.
+  * What type of database would you use and why?
+  * What caching solutions are out there? Which would you choose and why?
+  * What frameworks can we use as infrasctructure in your ecosystem of choice?
+  
