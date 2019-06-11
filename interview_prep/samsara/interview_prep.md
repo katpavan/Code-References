@@ -5,7 +5,8 @@
 ## 2. [Greedy Job Scheduling](../../algorithms/arrays_and_strings/jobSchedule.js), Weighted Job Scheduling 
 * Problem [summary](https://www.geeksforgeeks.org/job-sequencing-problem/)
 
-## 3. A scenario of their internal sensor data acquisition system and told me to generate an Alert when the state of the system changes  
+## 3. System Design
+* A scenario of their internal sensor data acquisition system and told me to generate an Alert when the state of the system changes  
 
 ## 4. Construct a data structure for a [card game](https://wsvincent.com/javascript-object-oriented-deck-cards/).  The format was to implement and test various parts of the game step by step. 
 * Design and code a data structure for a card that has three attributes
@@ -15,7 +16,7 @@
 * Write a method to deal any number of cards
 * Write a method to determine if the attributes of three cards all match or are all different
 
-## 5. Design a class to load freight[local](../../algorithms/classes/freights.js)
+## 5. Design a class to load [freight](../../algorithms/classes/freights.js)
 * Freight contaings weight and timestamp
 * Add method to return total weight
 * Add method to return weight at given time.  
