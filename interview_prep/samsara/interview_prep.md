@@ -14,7 +14,7 @@
 * Write a method to deal any number of cards
 * Write a method to determine if the attributes of three cards all match or are all different
 
-## 5. Design a class to load freight
+## 5. Design a class to load [freight](../../algorithms/classes/freights.js)
 * Freight contaings weight and timestamp
 * Add method to return total weight
 * Add method to return weight at given time.  
