@@ -2,7 +2,8 @@
 
 ## 1. [LRU](https://leetcode.com/problems/lru-cache/) (Least Recently Used) Cached
 
-## 2. [Greedy Job Scheduling](https://www.geeksforgeeks.org/job-sequencing-problem/), Weighted Job Scheduling 
+## 2. [Greedy Job Scheduling](../../algorithms/arrays_and_strings/jobSchedule.js), Weighted Job Scheduling 
+* Problem [summary](https://www.geeksforgeeks.org/job-sequencing-problem/)
 
 ## 3. A scenario of their internal sensor data acquisition system and told me to generate an Alert when the state of the system changes  
 
@@ -14,7 +15,7 @@
 * Write a method to deal any number of cards
 * Write a method to determine if the attributes of three cards all match or are all different
 
-## 5. Design a class to load freight[local](../../algorithms/classes/freights.js) [github]()
+## 5. Design a class to load freight[local](../../algorithms/classes/freights.js)
 * Freight contaings weight and timestamp
 * Add method to return total weight
 * Add method to return weight at given time.  
